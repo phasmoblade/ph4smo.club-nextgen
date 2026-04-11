@@ -3,7 +3,8 @@ local PlaceId = game.PlaceId
 local SupportedGames = {
     [4746041618] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/steel-titans.lua",
     [6516141723] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/doors.lua",
-    [79305036070450]= "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/spin-a-baddie.lua"
+    [79305036070450] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/spin-a-baddie.lua",
+    [70845479499574] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/bite-by-night.lua"
 }
 
 if SupportedGames[PlaceId] then
