@@ -4,7 +4,7 @@ export default function handler(req, res) {
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
 
   const script = `local ok, src = pcall(function()
-  return game:HttpGet("https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/main/main-script.lua", true)
+  return game:HttpGet("https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/loader.lua", true)
 end)
 if not ok or not src or src == "" then
   warn("[ph4smo] Fetch error: " .. tostring(src))
