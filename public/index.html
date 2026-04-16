@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ph4smo</title>
+    <title>ph4smo.club</title>
     <style>
         * {
             margin: 0;
@@ -22,7 +22,7 @@
         .cursor {
             width: 20px;
             height: 20px;
-            border: 2px solid rgba(99,102,241,.6);
+            border: 2px solid rgba(255,255,255,.4);
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -33,7 +33,7 @@
         .cursor-dot {
             width: 4px;
             height: 4px;
-            background: #6366f1;
+            background: #fff;
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -58,7 +58,7 @@
             transform: translate(-50%, -50%);
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
             pointer-events: none;
         }
         
@@ -71,18 +71,9 @@
             font-size: clamp(4rem, 12vw, 8rem);
             font-weight: 700;
             letter-spacing: -0.05em;
-            line-height: 0.9;
+            line-height: 1;
             margin-bottom: 20px;
-        }
-        
-        .title-top {
-            display: block;
             color: #fff;
-        }
-        
-        .title-bottom {
-            display: block;
-            color: #333;
         }
         
         .subtitle {
@@ -128,7 +119,7 @@
         .code-text {
             font-family: 'JetBrains Mono', 'Fira Code', monospace;
             font-size: 0.9rem;
-            color: #a5b4fc;
+            color: #999;
             line-height: 1.6;
             word-break: break-all;
         }
@@ -136,10 +127,10 @@
         .copy-btn {
             width: 100%;
             padding: 16px;
-            background: #6366f1;
+            background: #fff;
             border: none;
             border-radius: 12px;
-            color: #fff;
+            color: #000;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
@@ -148,26 +139,13 @@
         }
         
         .copy-btn:hover {
-            background: #4f46e5;
+            background: #e5e5e5;
             transform: translateY(-2px);
         }
         
         .copy-btn.copied {
             background: #10b981;
-        }
-        
-        .footer {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.85rem;
-            color: #444;
-        }
-        
-        .footer a {
-            color: #6366f1;
-            text-decoration: none;
+            color: #fff;
         }
         
         @media (max-width: 768px) {
@@ -191,11 +169,8 @@
     
     <div class="hero">
         <div class="title-wrapper">
-            <h1 class="title">
-                <span class="title-top">PH4SMO</span>
-                <span class="title-bottom">script hub</span>
-            </h1>
-            <p class="subtitle">roblox fe</p>
+            <h1 class="title">ph4smo.club</h1>
+            <p class="subtitle">roblox script hub</p>
         </div>
         
         <div class="loadstring-card">
@@ -207,12 +182,8 @@
                 </div>
                 <div class="code-text" id="code">loadstring(game:HttpGet("https://ph4smoclub.vercel.app/api/loader"))()</div>
             </div>
-            <button class="copy-btn" onclick="copy()">Copy</button>
+            <button class="copy-btn" onclick="copy()">copy</button>
         </div>
-    </div>
-    
-    <div class="footer">
-        by <a href="https://github.com/phasmoblade">phasmoblade</a>
     </div>
     
     <script>
@@ -226,7 +197,7 @@
             cursorDot.style.top = (e.clientY + 8) + 'px';
         });
         
-        document.querySelectorAll('button, a').forEach(el => {
+        document.querySelectorAll('button').forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'scale(1.5)';
             });
@@ -240,11 +211,11 @@
             const btn = event.target;
             
             navigator.clipboard.writeText(text).then(() => {
-                btn.textContent = 'Copied!';
+                btn.textContent = 'copied!';
                 btn.classList.add('copied');
                 
                 setTimeout(() => {
-                    btn.textContent = 'Copy';
+                    btn.textContent = 'copy';
                     btn.classList.remove('copied');
                 }, 1500);
             });
