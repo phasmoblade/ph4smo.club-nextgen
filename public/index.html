@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ph4smo loader</title>
+    <title>ph4smo</title>
     <style>
         * {
             margin: 0;
@@ -17,7 +17,6 @@
             color: #fff;
             min-height: 100vh;
             cursor: none;
-            padding: 80px 20px 40px;
         }
         
         .cursor {
@@ -41,100 +40,129 @@
             z-index: 9999;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            position: relative;
         }
         
-        .header {
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .title-wrapper {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         
         .title {
-            font-size: clamp(3rem, 8vw, 5rem);
+            font-size: clamp(4rem, 12vw, 8rem);
             font-weight: 700;
             letter-spacing: -0.05em;
             line-height: 0.9;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
         
-        .title-main {
+        .title-top {
             display: block;
             color: #fff;
         }
         
-        .title-sub {
+        .title-bottom {
             display: block;
             color: #333;
         }
         
         .subtitle {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #666;
             letter-spacing: 0.3em;
             text-transform: uppercase;
+            font-weight: 400;
         }
         
-        .scripts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-            margin-bottom: 60px;
-        }
-        
-        .script-card {
+        .loadstring-card {
+            max-width: 600px;
+            width: 100%;
             background: rgba(255,255,255,0.02);
             border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 16px;
-            padding: 32px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+        }
+        
+        .code-wrapper {
+            background: #0a0a0a;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
             position: relative;
-            overflow: hidden;
         }
         
-        .script-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #6366f1, transparent);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
+        .code-header {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 16px;
         }
         
-        .script-card:hover {
-            border-color: rgba(99,102,241,0.3);
-            background: rgba(255,255,255,0.04);
-            transform: translateY(-4px);
+        .code-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #333;
         }
         
-        .script-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .script-name {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-            letter-spacing: -0.02em;
-        }
-        
-        .script-desc {
+        .code-text {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
             font-size: 0.9rem;
-            color: #666;
-            line-height: 1.5;
+            color: #a5b4fc;
+            line-height: 1.6;
+            word-break: break-all;
+        }
+        
+        .copy-btn {
+            width: 100%;
+            padding: 16px;
+            background: #6366f1;
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.05em;
+        }
+        
+        .copy-btn:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+        }
+        
+        .copy-btn.copied {
+            background: #10b981;
         }
         
         .footer {
-            text-align: center;
-            color: #444;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
             font-size: 0.85rem;
-            margin-top: 60px;
+            color: #444;
         }
         
         .footer a {
@@ -143,12 +171,16 @@
         }
         
         @media (max-width: 768px) {
-            .scripts-grid {
-                grid-template-columns: 1fr;
+            .loadstring-card {
+                padding: 30px 20px;
             }
             
-            .header {
-                margin-bottom: 60px;
+            .code-wrapper {
+                padding: 20px;
+            }
+            
+            .code-text {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -157,50 +189,30 @@
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
     
-    <div class="container">
-        <div class="header">
+    <div class="hero">
+        <div class="title-wrapper">
             <h1 class="title">
-                <span class="title-main">PH4SMO</span>
-                <span class="title-sub">select script</span>
+                <span class="title-top">PH4SMO</span>
+                <span class="title-bottom">script hub</span>
             </h1>
-            <p class="subtitle">script hub</p>
+            <p class="subtitle">roblox fe</p>
         </div>
         
-        <div class="scripts-grid">
-            <div class="script-card" onclick="load('arsenal')">
-                <div class="script-name">Arsenal</div>
-                <div class="script-desc">aimbot, esp, movement</div>
+        <div class="loadstring-card">
+            <div class="code-wrapper">
+                <div class="code-header">
+                    <div class="code-dot"></div>
+                    <div class="code-dot"></div>
+                    <div class="code-dot"></div>
+                </div>
+                <div class="code-text" id="code">loadstring(game:HttpGet("https://ph4smoclub.vercel.app/api/loader"))()</div>
             </div>
-            
-            <div class="script-card" onclick="load('doors')">
-                <div class="script-name">Doors</div>
-                <div class="script-desc">esp, fullbright, speed</div>
-            </div>
-            
-            <div class="script-card" onclick="load('ninja-legends')">
-                <div class="script-name">Ninja Legends</div>
-                <div class="script-desc">auto farm, auto sell</div>
-            </div>
-            
-            <div class="script-card" onclick="load('steel-titans')">
-                <div class="script-name">Steel Titans</div>
-                <div class="script-desc">auto farm, auto rebirth</div>
-            </div>
-            
-            <div class="script-card" onclick="load('ftap')">
-                <div class="script-name">Find The Animals</div>
-                <div class="script-desc">esp, teleport</div>
-            </div>
-            
-            <div class="script-card" onclick="load('bite-by-night')">
-                <div class="script-name">Bite By Night</div>
-                <div class="script-desc">auto farm, auto quest</div>
-            </div>
+            <button class="copy-btn" onclick="copy()">Copy</button>
         </div>
-        
-        <div class="footer">
-            by <a href="https://github.com/phasmoblade">phasmoblade</a>
-        </div>
+    </div>
+    
+    <div class="footer">
+        by <a href="https://github.com/phasmoblade">phasmoblade</a>
     </div>
     
     <script>
@@ -214,7 +226,7 @@
             cursorDot.style.top = (e.clientY + 8) + 'px';
         });
         
-        document.querySelectorAll('.script-card, a').forEach(el => {
+        document.querySelectorAll('button, a').forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'scale(1.5)';
             });
@@ -223,8 +235,19 @@
             });
         });
         
-        function load(script) {
-            console.log('Loading:', script);
+        function copy() {
+            const text = document.getElementById('code').textContent;
+            const btn = event.target;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 1500);
+            });
         }
     </script>
 </body>
