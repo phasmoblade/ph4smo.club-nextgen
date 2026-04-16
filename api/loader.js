@@ -151,8 +151,8 @@ export default function handler(req, res) {
         
         <div class="message-card">
             <p class="message-text">
-                You're not supposed to be here.<br>
-                This endpoint is for Roblox executors only.
+                get the fuck out cracker.<br>
+                you're not welcome here.
             </p>
             <a href="/" class="back-btn">← Back to Home</a>
         </div>
