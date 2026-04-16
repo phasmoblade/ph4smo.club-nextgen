@@ -18,172 +18,163 @@ export default function handler(req, res) {
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #0a0a0a;
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #000;
             color: #fff;
             min-height: 100vh;
+            cursor: none;
+        }
+        
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,.4);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease;
+        }
+        
+        .cursor-dot {
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        .hero {
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            overflow: hidden;
+            padding: 40px 20px;
+            position: relative;
         }
         
-        .container {
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .title-wrapper {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .title {
+            font-size: clamp(4rem, 12vw, 8rem);
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            line-height: 1;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        
+        .message-card {
             max-width: 600px;
             width: 100%;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
             text-align: center;
-            z-index: 10;
         }
         
-        .icon {
-            font-size: 5em;
-            margin-bottom: 20px;
-            animation: shake 0.5s ease-in-out infinite alternate;
-        }
-        
-        @keyframes shake {
-            0% { transform: rotate(-5deg); }
-            100% { transform: rotate(5deg); }
-        }
-        
-        h1 {
-            font-size: 3em;
-            font-weight: 700;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: glow 2s ease-in-out infinite;
-        }
-        
-        @keyframes glow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        
-        .message {
-            font-size: 1.3em;
-            color: #888;
-            margin-bottom: 30px;
+        .message-text {
+            font-size: 1.1rem;
+            color: #999;
             line-height: 1.6;
-        }
-        
-        .code-box {
-            background: #1a1a1a;
-            border: 2px solid #ff6b6b;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 30px 0;
-            box-shadow: 0 0 30px rgba(255, 107, 107, 0.3);
-        }
-        
-        .code-text {
-            font-family: 'Courier New', monospace;
-            color: #ff6b6b;
-            font-size: 0.9em;
-            word-break: break-all;
+            margin-bottom: 30px;
         }
         
         .back-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            padding: 15px 40px;
-            border-radius: 8px;
-            font-size: 1.1em;
+            background: #fff;
+            border: none;
+            border-radius: 12px;
+            color: #000;
+            padding: 16px 40px;
+            font-size: 1rem;
             font-weight: 600;
-            transition: all 0.3s ease;
-            margin-top: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.05em;
+            text-decoration: none;
         }
         
         .back-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 25px rgba(102, 126, 234, 0.5);
+            background: #e5e5e5;
+            transform: translateY(-2px);
         }
         
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        .particle {
-            position: absolute;
-            background: #ff6b6b;
-            border-radius: 50%;
-            opacity: 0.3;
-            animation: float-particle 10s infinite;
-        }
-        
-        @keyframes float-particle {
-            0%, 100% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.3;
-            }
-            90% {
-                opacity: 0.3;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(50px);
-                opacity: 0;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
+        @media (max-width: 768px) {
+            .message-card {
+                padding: 30px 20px;
             }
             
-            .icon {
-                font-size: 3.5em;
-            }
-            
-            .message {
-                font-size: 1.1em;
+            .message-text {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="particles" id="particles"></div>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
     
-    <div class="container">
-        <div class="icon">🚫</div>
-        <h1>Access Denied</h1>
-        <p class="message">
-            You're not supposed to be here.<br>
-            This endpoint is for Roblox executors only.
-        </p>
-        
-        <div class="code-box">
-            <div class="code-text">HTTP 403 - Forbidden</div>
+    <div class="hero">
+        <div class="title-wrapper">
+            <h1 class="title">ph4smo.club</h1>
+            <p class="subtitle">access denied</p>
         </div>
         
-        <a href="/" class="back-btn">← Back to Home</a>
+        <div class="message-card">
+            <p class="message-text">
+                You're not supposed to be here.<br>
+                This endpoint is for Roblox executors only.
+            </p>
+            <a href="/" class="back-btn">← Back to Home</a>
+        </div>
     </div>
     
     <script>
-        const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 15; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.width = Math.random() * 10 + 5 + 'px';
-            particle.style.height = particle.style.width;
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 10 + 's';
-            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-            particlesContainer.appendChild(particle);
-        }
+        const cursor = document.querySelector('.cursor');
+        const cursorDot = document.querySelector('.cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            cursorDot.style.left = (e.clientX + 8) + 'px';
+            cursorDot.style.top = (e.clientY + 8) + 'px';
+        });
+        
+        document.querySelector('.back-btn').addEventListener('mouseenter', () => {
+            cursor.style.transform = 'scale(1.5)';
+        });
+        document.querySelector('.back-btn').addEventListener('mouseleave', () => {
+            cursor.style.transform = 'scale(1)';
+        });
     </script>
 </body>
 </html>`);
