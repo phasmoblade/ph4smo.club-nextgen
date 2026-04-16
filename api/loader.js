@@ -151,10 +151,9 @@ export default function handler(req, res) {
         
         <div class="message-card">
             <p class="message-text">
-                get the fuck out cracker.<br>
-                you're not welcome here.
+                please leave. cracker, you are not welcome here.
             </p>
-            <a href="/" class="back-btn">← Back to Home</a>
+            <a href="/" class="back-btn">← back to home</a>
         </div>
     </div>
     
