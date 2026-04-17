@@ -1,10 +1,5 @@
 {
-  "name": "ph4smoclub-scripts",
+  "name": "ph4smoclub",
   "version": "1.0.0",
-  "description": "ph4smo.club script hosting",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vercel dev",
-    "deploy": "vercel --prod"
-  }
+  "type": "module"
 }
