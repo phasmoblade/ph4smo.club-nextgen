@@ -15,19 +15,22 @@ local function loadScript(url)
     end)
     
     if success and result then
-        local loadSuccess, loadError = pcall(function()
-            loadstring(result)()
-        end)
+        local func, compileError = loadstring(result)
         
-        if not loadSuccess then
-            warn("Script execution error: " .. tostring(loadError))
+        if func then
+            local loadSuccess, loadError = pcall(func)
+            
+            if not loadSuccess then
+                warn("Script execution error: " .. tostring(loadError))
+            end
+        else
+            warn("Script compile error: " .. tostring(compileError))
         end
     else
         warn("Failed to download script: " .. tostring(result))
     end
 end
 
--- Load script in separate thread
 task.spawn(function()
     if SupportedGames[PlaceId] then
         loadScript(SupportedGames[PlaceId])
