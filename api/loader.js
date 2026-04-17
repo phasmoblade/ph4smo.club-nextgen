@@ -184,22 +184,46 @@ export default function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
 
-  const script = `local ok, src = pcall(function()
-  return game:HttpGet("https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/main/loader.lua", true)
-end)
-if not ok or not src or src == "" then
-  warn("[ph4smo] Fetch error: " .. tostring(src))
-  return
+  const script = `local PlaceId = game.PlaceId
+
+local SupportedGames = {
+    [4746041618] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/steel-titans.lua",
+    [6516141723] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/doors.lua",
+    [79305036070450] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/scripts/main/spin-a-baddie.lua",
+    [70845479499574] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/scripts/main/bite-by-night.lua",
+    [6961824067] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/ftap.lua",
+    [3956818381] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/ninja-legends.lua"
+}
+
+local function loadScript(url)
+    local success, result = pcall(function()
+        return game:HttpGet(url, true)
+    end)
+    
+    if success and result then
+        local func, compileError = loadstring(result)
+        
+        if func then
+            local loadSuccess, loadError = pcall(func)
+            
+            if not loadSuccess then
+                warn("Script execution error: " .. tostring(loadError))
+            end
+        else
+            warn("Script compile error: " .. tostring(compileError))
+        end
+    else
+        warn("Failed to download script: " .. tostring(result))
+    end
 end
-local fn, err = loadstring(src)
-if not fn then
-  warn("[ph4smo] Compile error: " .. tostring(err))
-  return
-end
-local ok2, err2 = pcall(fn)
-if not ok2 then
-  warn("[ph4smo] Runtime error: " .. tostring(err2))
-end`;
+
+task.spawn(function()
+    if SupportedGames[PlaceId] then
+        loadScript(SupportedGames[PlaceId])
+    else
+        loadScript("https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/main-script.lua")
+    end
+end)`;
 
   res.status(200).send(script);
 }
