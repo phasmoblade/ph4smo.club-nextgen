@@ -1,6 +1,6 @@
-#ph4smo.club nextgen - keyless roblox script hub XD
+# ph4smo.club nextgen - keyless roblox script hub XD
 - Loadstring in releases..
-#Supported Games (17.04.2026):
+# Supported Games (17.04.2026):
 - Bite By Night
 - Doors
 - Fling Things And People (FTAP)
