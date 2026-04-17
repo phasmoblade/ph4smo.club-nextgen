@@ -7,5 +7,5 @@
 - Ninja Legends
 - Spin a Baddie
 - Steel Titans
-#WARNING!!
+# WARNING!!
 - ph4smo.club not still working on Xeno API/Solara API (Tested), just use good exec >.<
