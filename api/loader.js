@@ -189,8 +189,8 @@ export default function handler(req, res) {
 local SupportedGames = {
     [4746041618] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/steel-titans.lua",
     [6516141723] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/doors.lua",
-    [79305036070450] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/scripts/main/spin-a-baddie.lua",
-    [70845479499574] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/scripts/main/bite-by-night.lua",
+    [79305036070450] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/spin-a-baddie.lua",
+    [70845479499574] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/bite-by-night.lua",
     [6961824067] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/ftap.lua",
     [3956818381] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/ninja-legends.lua"
 }
