@@ -1,6 +1,3 @@
-import fs from 'fs';
-import path from 'path';
-
 export default function handler(req, res) {
   const userAgent = req.headers['user-agent'] || '';
   const isBrowser = userAgent.includes('Mozilla') || userAgent.includes('Chrome') || userAgent.includes('Safari');
@@ -188,7 +185,7 @@ export default function handler(req, res) {
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
 
   const script = `local ok, src = pcall(function()
-  return game:HttpGet("https://ph4smoclub.vercel.app/scripts/loader.lua", true)
+  return game:HttpGet("https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/main/loader.lua", true)
 end)
 if not ok or not src or src == "" then
   warn("[ph4smo] Fetch error: " .. tostring(src))
