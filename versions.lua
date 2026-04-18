@@ -5,5 +5,6 @@ return {
 	["ftap"] = "1.0",
 	["ninja-legends"] = "1.0",
 	["spin-a-baddie"] = "1.0.2",
-	["steel-titans"] = "1.1"
+	["steel-titans"] = "1.1",
+	["flick"] = "1.0"
 }
