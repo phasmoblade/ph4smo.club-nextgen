@@ -233,7 +233,7 @@
         });
         
         function copyLoadstring(game) {
-            const loadstring = `loadstring(game:HttpGet("https://ph4smoclub.vercel.app/api/loader"))()`;
+            const loadstring = `loadstring(game:HttpGet("https://ph4smo.vercel.app/api/loader"))()`;
             navigator.clipboard.writeText(loadstring).then(() => {
                 const btn = event.target.closest('.game-card');
                 const originalText = btn.querySelector('.game-name').textContent;
