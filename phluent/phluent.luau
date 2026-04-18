@@ -1,13 +1,15 @@
 --[[
 
-███████╗██╗░░░░░██╗░░░██╗███████╗███╗░░██╗████████╗  ██████╗░██╗░░░░░██╗░░░██╗░██████╗
-██╔════╝██║░░░░░██║░░░██║██╔════╝████╗░██║╚══██╔══╝  ██╔══██╗██║░░░░░██║░░░██║██╔════╝
-█████╗░░██║░░░░░██║░░░██║█████╗░░██╔██╗██║░░░██║░░░  ██████╔╝██║░░░░░██║░░░██║╚█████╗░
-██╔══╝░░██║░░░░░██║░░░██║██╔══╝░░██║╚████║░░░██║░░░  ██╔═══╝░██║░░░░░██║░░░██║░╚═══██╗
-██║░░░░░███████╗╚██████╔╝███████╗██║░╚███║░░░██║░░░  ██║░░░░░███████╗╚██████╔╝██████╔╝
-╚═╝░░░░░╚══════╝░╚═════╝░╚══════╝╚═╝░░╚══╝░░░╚═╝░░░  ╚═╝░░░░░╚══════╝░╚═════╝░╚═════╝░
+                                                                    
+▄▄▄▄▄▄▄   ▄▄▄   ▄▄▄ ▄▄▄      ▄▄▄  ▄▄▄  ▄▄▄▄▄▄▄ ▄▄▄    ▄▄▄ ▄▄▄▄▄▄▄▄▄ 
+███▀▀███▄ ███   ███ ███      ███  ███ ███▀▀▀▀▀ ████▄  ███ ▀▀▀███▀▀▀ 
+███▄▄███▀ █████████ ███      ███  ███ ███▄▄    ███▀██▄███    ███    
+███▀▀▀▀   ███▀▀▀███ ███      ███▄▄███ ███      ███  ▀████    ███    
+███       ███   ███ ████████ ▀██████▀ ▀███████ ███    ███    ███    
+                                                                    
+                                                                    
 
-A modified version of Fluent
+A modified version of Fluent Plus aka fork of Fluent
 https://fluent-pl.us
 
 ]]
@@ -4141,6 +4143,26 @@ Components.TitleBar = (function()
 						TextColor3 = "Text",
 					},
 				}) or nil,
+				Config.Version and New("TextLabel", {
+					RichText = true,
+					Text = "v" .. Config.Version,
+					FontFace = Font.new(
+						"rbxasset://fonts/families/GothamSSm.json",
+						Enum.FontWeight.Medium,
+						Enum.FontStyle.Normal
+					),
+					TextSize = 12,
+					TextXAlignment = "Left",
+					TextYAlignment = "Center",
+					Size = UDim2.fromScale(0, 1),
+					AutomaticSize = Enum.AutomaticSize.X,
+					BackgroundTransparency = 1,
+					LayoutOrder = Config.Icon and 4 or 3,
+					Name = "VersionLabel",
+					ThemeTag = {
+						TextColor3 = "Accent",
+					},
+				}) or nil,
 
 			}),
 			New("Frame", {
@@ -4736,6 +4758,7 @@ Components.Window = (function()
 		Window.TitleBar = Components.TitleBar({
 			Title = Config.Title,
 			SubTitle = Config.SubTitle,
+			Version = Config.Version,
 			Icon = Config.Icon,
 			Parent = Window.Root,
 			Window = Window,
