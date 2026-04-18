@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games - ph4smo.club</title>
+    <title>Supported Games - ph4smo.club</title>
     <style>
         * {
             margin: 0;
@@ -50,39 +50,26 @@
             z-index: 9999;
         }
         
-        .hero {
+        .container {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px 20px;
-            position: relative;
+            padding: 60px 20px;
         }
         
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        
-        .title-wrapper {
+        .header {
             text-align: center;
             margin-bottom: 60px;
         }
         
         .title {
-            font-size: clamp(4rem, 12vw, 8rem);
+            font-size: clamp(3rem, 8vw, 5rem);
             font-weight: 700;
             letter-spacing: -0.05em;
             line-height: 1;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             color: #fff;
         }
         
@@ -94,8 +81,8 @@
             font-weight: 400;
         }
         
-        .games-container {
-            max-width: 900px;
+        .games-list {
+            max-width: 600px;
             width: 100%;
             background: rgba(255,255,255,0.02);
             border: 1px solid rgba(255,255,255,0.05);
@@ -104,63 +91,48 @@
             backdrop-filter: blur(20px);
         }
         
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .game-card {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 16px;
-            padding: 24px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        
-        .game-card:hover {
-            border-color: rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.04);
-            transform: translateY(-4px);
-        }
-        
-        .game-name {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-        
-        .game-desc {
-            font-size: 0.85rem;
-            color: #666;
-            line-height: 1.5;
-        }
-        
-        .back-link {
-            position: absolute;
-            top: 40px;
-            left: 40px;
-            color: #666;
-            text-decoration: none;
-            font-size: 0.9rem;
+        .game-item {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 1.1rem;
+            color: #ccc;
             transition: color 0.2s;
         }
         
-        .back-link:hover {
+        .game-item:last-child {
+            border-bottom: none;
+        }
+        
+        .game-item:hover {
+            color: #fff;
+        }
+        
+        .back-link {
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .back-link a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.1em;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+        
+        .back-link a:hover {
             color: #fff;
         }
         
         @media (max-width: 768px) {
-            .games-container {
+            .games-list {
                 padding: 30px 20px;
             }
             
-            .back-link {
-                top: 20px;
-                left: 20px;
+            .game-item {
+                font-size: 1rem;
+                padding: 16px 0;
             }
         }
     </style>
@@ -169,46 +141,24 @@
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
     
-    <a href="/" class="back-link">← back</a>
-    
-    <div class="hero">
-        <div class="title-wrapper">
-            <h1 class="title">supported games</h1>
-            <p class="subtitle">select a game</p>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">ph4smo.club</h1>
+            <p class="subtitle">supported games</p>
         </div>
         
-        <div class="games-container">
-            <div class="games-grid">
-                <div class="game-card" onclick="copyLoadstring('bite-by-night')">
-                    <div class="game-name">bite by night</div>
-                    <div class="game-desc">auto farm • auto quest • speed</div>
-                </div>
-                
-                <div class="game-card" onclick="copyLoadstring('doors')">
-                    <div class="game-name">doors</div>
-                    <div class="game-desc">esp • fullbright • speed</div>
-                </div>
-                
-                <div class="game-card" onclick="copyLoadstring('ftap')">
-                    <div class="game-name">find the animals</div>
-                    <div class="game-desc">esp • teleport • speed</div>
-                </div>
-                
-                <div class="game-card" onclick="copyLoadstring('ninja-legends')">
-                    <div class="game-name">ninja legends</div>
-                    <div class="game-desc">auto farm • auto sell • speed</div>
-                </div>
-                
-                <div class="game-card" onclick="copyLoadstring('spin-a-baddie')">
-                    <div class="game-name">spin a baddie</div>
-                    <div class="game-desc">auto farm • auto rebirth</div>
-                </div>
-                
-                <div class="game-card" onclick="copyLoadstring('steel-titans')">
-                    <div class="game-name">steel titans</div>
-                    <div class="game-desc">auto farm • auto rebirth • speed</div>
-                </div>
-            </div>
+        <div class="games-list">
+            <div class="game-item">Bite By Night</div>
+            <div class="game-item">Doors</div>
+            <div class="game-item">Flick</div>
+            <div class="game-item">FTAP (Fling Things And People)</div>
+            <div class="game-item">Ninja Legends</div>
+            <div class="game-item">Spin a Baddie</div>
+            <div class="game-item">Steel Titans</div>
+        </div>
+        
+        <div class="back-link">
+            <a href="/">← BACK TO HOME</a>
         </div>
     </div>
     
@@ -223,7 +173,7 @@
             cursorDot.style.top = (e.clientY + 8) + 'px';
         });
         
-        document.querySelectorAll('.game-card').forEach(el => {
+        document.querySelectorAll('a').forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'scale(1.5)';
             });
@@ -231,18 +181,6 @@
                 cursor.style.transform = 'scale(1)';
             });
         });
-        
-        function copyLoadstring(game) {
-            const loadstring = `loadstring(game:HttpGet("https://ph4smo.vercel.app/api/loader"))()`;
-            navigator.clipboard.writeText(loadstring).then(() => {
-                const btn = event.target.closest('.game-card');
-                const originalText = btn.querySelector('.game-name').textContent;
-                btn.querySelector('.game-name').textContent = 'copied!';
-                setTimeout(() => {
-                    btn.querySelector('.game-name').textContent = originalText;
-                }, 1500);
-            });
-        }
     </script>
 </body>
 </html>
