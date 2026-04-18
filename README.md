@@ -3,13 +3,8 @@
 # Based on Phluent (aka fork Fluent plus aka fork Fluent)
 - https://fluent-pl.us/
 - https://github.com/dawid-scripts/Fluent
-# Supported Games (17.04.2026):
-- Bite By Night
-- Doors
-- Fling Things And People (FTAP)
-- Ninja Legends
-- Spin a Baddie
-- Steel Titans
+# Supported Games (18.04.2026):
+https://ph4smo.vercel.app/games
 # WARNING!!
 - ph4smo.club not still working on Xeno API/Solara API (Tested), just use good exec >.<
 # SS
