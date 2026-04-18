@@ -15,7 +15,8 @@
 # SS
 - Script Preview
 
-<img width="1116" height="723" alt="image (1)" src="https://github.com/user-attachments/assets/915adaf0-3853-4949-870a-788f0fe142e8" />
+<img width="761" height="592" alt="image (2)" src="https://github.com/user-attachments/assets/ee8d4d36-9f17-4a40-8c22-aff755fba9f6" />
+
 
 - Site Preview
 
