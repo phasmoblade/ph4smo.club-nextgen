@@ -1,5 +1,8 @@
 # ph4smo.club nextgen - keyless roblox script hub XD
 - Loadstring in releases..
+# Based on Phluent (aka fork Fluent plus aka fork Fluent)
+- https://fluent-pl.us/
+- https://github.com/dawid-scripts/Fluent
 # Supported Games (17.04.2026):
 - Bite By Night
 - Doors
