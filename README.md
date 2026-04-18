@@ -13,9 +13,10 @@
 # WARNING!!
 - ph4smo.club not still working on Xeno API/Solara API (Tested), just use good exec >.<
 # SS
-- Script Preview
+- Gui Preview
 
-<img width="761" height="592" alt="image (2)" src="https://github.com/user-attachments/assets/ee8d4d36-9f17-4a40-8c22-aff755fba9f6" />
+<img width="1912" height="1001" alt="image" src="https://github.com/user-attachments/assets/506bbbde-2624-44ed-8a0c-90ae4e434ab0" />
+
 
 
 - Site Preview
