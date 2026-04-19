@@ -1,6 +1,5 @@
 return {
-	-- ["arsenal"] = "1.0",
-	["bite-by-night"] = "1.5",
+	["bite-by-night"] = "1.6",
 	["doors"] = "1.1",
 	["ftap"] = "1.0",
 	["ninja-legends"] = "1.0",
