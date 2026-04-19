@@ -7,7 +7,7 @@ local SupportedGames = {
     [70845479499574] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/bite-by-night.lua",
     [6961824067] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/ftap.lua",
     [3956818381] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/ninja-legends.lua",
-    [12996038] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/flick.lua"
+    [136801880565837] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/flick.lua"
 }
 
 local function loadScript(url)
