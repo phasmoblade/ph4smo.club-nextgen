@@ -1,4 +1,13 @@
 export default function handler(req, res) {
+  // Handle CORS preflight
+  if (req.method === 'OPTIONS') {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.status(200).end();
+    return;
+  }
+
   const userAgent = req.headers['user-agent'] || '';
   const isBrowser = userAgent.includes('Mozilla') || userAgent.includes('Chrome') || userAgent.includes('Safari');
   
@@ -185,47 +194,67 @@ export default function handler(req, res) {
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.setHeader('Content-Encoding', 'identity');
 
-  const script = `local PlaceId = game.PlaceId
+  const script = `-- ph4smo.club loader
+-- Two-stage loading: key-system.lua → loader.lua
 
-local SupportedGames = {
-    [4746041618] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/steel-titans.lua",
-    [6516141723] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/doors.lua",
-    [79305036070450] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/spin-a-baddie.lua",
-    [70845479499574] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/bite-by-night.lua",
-    [6961824067] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/ftap.lua",
-    [3956818381] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/ninja-legends.lua",
-    [136801880565837] = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/flick.lua"
-}
+print("[ph4smo.club] Loading key system...")
+
+-- Load key-system.lua first
+local keySystemUrl = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/key-system.lua"
+local loaderUrl = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/loader.lua"
 
 local function loadScript(url)
     local success, result = pcall(function()
         return game:HttpGet(url, true)
     end)
     
-    if success and result then
-        local func, compileError = loadstring(result)
-        
-        if func then
-            local loadSuccess, loadError = pcall(func)
-            
-            if not loadSuccess then
-                warn("Script execution error: " .. tostring(loadError))
-            end
-        else
-            warn("Script compile error: " .. tostring(compileError))
-        end
-    else
-        warn("Failed to download script: " .. tostring(result))
+    if not success then
+        warn("[ph4smo.club] Failed to download: " .. tostring(result))
+        return false
     end
+    
+    local func, compileError = loadstring(result)
+    
+    if not func then
+        warn("[ph4smo.club] Compile error: " .. tostring(compileError))
+        return false
+    end
+    
+    local loadSuccess, loadError = pcall(func)
+    
+    if not loadSuccess then
+        warn("[ph4smo.club] Execution error: " .. tostring(loadError))
+        return false
+    end
+    
+    return true
 end
 
-task.spawn(function()
-    if SupportedGames[PlaceId] then
-        loadScript(SupportedGames[PlaceId])
-    else
-        loadScript("https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/scripts/main-script.lua")
-    end
-end)`;
+-- Step 1: Load key-system.lua (handles key validation and GUI)
+local keySystemSuccess = loadScript(keySystemUrl)
+
+if not keySystemSuccess then
+    warn("[ph4smo.club] Failed to load key system")
+    return
+end
+
+-- Wait for key system to complete (GUI closed or key validated)
+local CoreGui = game:GetService("CoreGui")
+repeat 
+    task.wait(0.5) 
+until not CoreGui:FindFirstChild("ph4smoKeySystem")
+
+print("[ph4smo.club] Key system completed, loading main loader...")
+
+-- Step 2: Load loader.lua (loads game scripts)
+local loaderSuccess = loadScript(loaderUrl)
+
+if not loaderSuccess then
+    warn("[ph4smo.club] Failed to load main loader")
+    return
+end
+
+print("[ph4smo.club] Loader complete!")`;
 
   res.status(200).send(script);
 }
