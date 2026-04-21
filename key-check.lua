@@ -1,16 +1,6 @@
---[[ 
+-- ph4smo.club Key Verification Module
+-- Include this at the start of every script to verify key
 
-██████╗ ██╗  ██╗██╗  ██╗███████╗███╗   ███╗ ██████╗     ██████╗██╗     ██╗   ██╗██████╗ 
-██╔══██╗██║  ██║██║  ██║██╔════╝████╗ ████║██╔═══██╗   ██╔════╝██║     ██║   ██║██╔══██╗
-██████╔╝███████║███████║███████╗██╔████╔██║██║   ██║   ██║     ██║     ██║   ██║██████╔╝
-██╔═══╝ ██╔══██║╚════██║╚════██║██║╚██╔╝██║██║   ██║   ██║     ██║     ██║   ██║██╔══██╗
-██║     ██║  ██║     ██║███████║██║ ╚═╝ ██║╚██████╔╝██╗╚██████╗███████╗╚██████╔╝██████╔╝
-╚═╝     ╚═╝  ╚═╝     ╚═╝╚══════╝╚═╝     ╚═╝ ╚═════╝ ╚═╝ ╚═════╝╚══════╝ ╚═════╝ ╚═════╝ 
-
-        Obfuscated by ph4smo.club | Advanced Protection System v2.0
-        https://github.com/phasmoblade | @phasmoblade
-
-]]
 local HttpService = game:GetService("HttpService")
 local API_URL = "https://ph4smoapi.vercel.app/api/checkkey"
 local KEY_STORAGE = "ph4smo_key_v1"
@@ -98,7 +88,7 @@ local function validateKey(key)
     end
 end
 
-
+-- Main verification function
 local function verifyKey()
     local savedKey = loadSavedKey()
     
@@ -121,5 +111,5 @@ local function verifyKey()
     return true
 end
 
-
+-- Export verification function
 return verifyKey

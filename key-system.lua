@@ -1,16 +1,6 @@
---[[ 
+-- ph4smo.club Key System GUI
+-- Shows GUI for key input, validates and saves key
 
-██████╗ ██╗  ██╗██╗  ██╗███████╗███╗   ███╗ ██████╗     ██████╗██╗     ██╗   ██╗██████╗ 
-██╔══██╗██║  ██║██║  ██║██╔════╝████╗ ████║██╔═══██╗   ██╔════╝██║     ██║   ██║██╔══██╗
-██████╔╝███████║███████║███████╗██╔████╔██║██║   ██║   ██║     ██║     ██║   ██║██████╔╝
-██╔═══╝ ██╔══██║╚════██║╚════██║██║╚██╔╝██║██║   ██║   ██║     ██║     ██║   ██║██╔══██╗
-██║     ██║  ██║     ██║███████║██║ ╚═╝ ██║╚██████╔╝██╗╚██████╗███████╗╚██████╔╝██████╔╝
-╚═╝     ╚═╝  ╚═╝     ╚═╝╚══════╝╚═╝     ╚═╝ ╚═════╝ ╚═╝ ╚═════╝╚══════╝ ╚═════╝ ╚═════╝ 
-
-        Obfuscated by ph4smo.club | Advanced Protection System v2.0
-        https://github.com/phasmoblade | @phasmoblade
-
-]]
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
@@ -98,13 +88,13 @@ local function validateKey(key)
 end
 
 local function createGUI()
-    
+    -- Create ScreenGui
     local gui = Instance.new("ScreenGui")
     gui.Name = "ph4smoKeySystem"
     gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     gui.ResetOnSpawn = false
     
-    
+    -- Main Frame
     local main = Instance.new("Frame")
     main.Name = "Main"
     main.Size = UDim2.new(0, 380, 0, 200)
@@ -122,7 +112,7 @@ local function createGUI()
     mainStroke.Thickness = 1.5
     mainStroke.Parent = main
     
-    
+    -- Top bar for dragging
     local topBar = Instance.new("Frame")
     topBar.Name = "TopBar"
     topBar.Size = UDim2.new(1, 0, 0, 50)
@@ -130,7 +120,7 @@ local function createGUI()
     topBar.BackgroundTransparency = 1
     topBar.Parent = main
     
-    
+    -- Close Button
     local closeBtn = Instance.new("TextButton")
     closeBtn.Name = "CloseBtn"
     closeBtn.Size = UDim2.new(0, 28, 0, 28)
@@ -147,7 +137,7 @@ local function createGUI()
     closeCorner.CornerRadius = UDim.new(0, 8)
     closeCorner.Parent = closeBtn
     
-    
+    -- Title
     local title = Instance.new("TextLabel")
     title.Name = "Title"
     title.Size = UDim2.new(1, 0, 0, 25)
@@ -160,7 +150,7 @@ local function createGUI()
     title.TextXAlignment = Enum.TextXAlignment.Center
     title.Parent = main
     
-    
+    -- Subtitle
     local subtitle = Instance.new("TextLabel")
     subtitle.Name = "Subtitle"
     subtitle.Size = UDim2.new(1, 0, 0, 12)
@@ -173,7 +163,7 @@ local function createGUI()
     subtitle.TextXAlignment = Enum.TextXAlignment.Center
     subtitle.Parent = main
     
-    
+    -- Key Input Frame
     local inputFrame = Instance.new("Frame")
     inputFrame.Name = "InputFrame"
     inputFrame.Size = UDim2.new(1, -40, 0, 42)
@@ -201,7 +191,7 @@ local function createGUI()
     keyInput.ClearTextOnFocus = false
     keyInput.Parent = inputFrame
     
-    
+    -- Status Label
     local status = Instance.new("TextLabel")
     status.Name = "Status"
     status.Size = UDim2.new(1, -40, 0, 20)
@@ -215,7 +205,7 @@ local function createGUI()
     status.TextXAlignment = Enum.TextXAlignment.Center
     status.Parent = main
     
-    
+    -- Check Key Button
     local checkBtn = Instance.new("TextButton")
     checkBtn.Name = "CheckBtn"
     checkBtn.Size = UDim2.new(0, 165, 0, 38)
@@ -232,7 +222,7 @@ local function createGUI()
     checkCorner.CornerRadius = UDim.new(0, 10)
     checkCorner.Parent = checkBtn
     
-    
+    -- Get Key Button
     local getBtn = Instance.new("TextButton")
     getBtn.Name = "GetBtn"
     getBtn.Size = UDim2.new(0, 165, 0, 38)
@@ -249,7 +239,7 @@ local function createGUI()
     getCorner.CornerRadius = UDim.new(0, 10)
     getCorner.Parent = getBtn
     
-    
+    -- Dragging functionality
     local dragging = false
     local dragInput, mousePos, framePos
     
@@ -285,7 +275,7 @@ local function createGUI()
         end
     end)
     
-    
+    -- Button hover effects
     local function buttonHover(btn, hoverColor, normalColor)
         btn.MouseEnter:Connect(function()
             TweenService:Create(btn, TweenInfo.new(0.15), {BackgroundColor3 = hoverColor}):Play()
@@ -299,12 +289,12 @@ local function createGUI()
     buttonHover(getBtn, Color3.fromRGB(45, 45, 45), Color3.fromRGB(35, 35, 35))
     buttonHover(closeBtn, Color3.fromRGB(220, 50, 50), Color3.fromRGB(30, 30, 30))
     
-    
+    -- Close button click
     closeBtn.MouseButton1Click:Connect(function()
         gui:Destroy()
     end)
     
-    
+    -- Check Key Button Click
     checkBtn.MouseButton1Click:Connect(function()
         local key = keyInput.Text:upper():gsub("%s+", "")
         
@@ -332,7 +322,7 @@ local function createGUI()
             task.wait(1)
             gui:Destroy()
             
-            
+            -- Return success to continue loading
             return true
         else
             status.Text = message
@@ -342,7 +332,7 @@ local function createGUI()
         end
     end)
     
-    
+    -- Get Key Button Click
     getBtn.MouseButton1Click:Connect(function()
         if setclipboard then
             setclipboard("https://ph4smoapi.vercel.app/get-key")
@@ -354,7 +344,7 @@ local function createGUI()
         end
     end)
     
-    
+    -- Try to load saved key
     local savedKey = loadSavedKey()
     if savedKey then
         keyInput.Text = savedKey
@@ -365,7 +355,7 @@ local function createGUI()
     return gui
 end
 
-
+-- Main execution
 local savedKey = loadSavedKey()
 
 if savedKey then
@@ -377,14 +367,14 @@ if savedKey then
     end
 end
 
-
+-- Show GUI if no valid key
 print("[ph4smo.club] Please enter your key")
 createGUI()
 
-
+-- Wait for GUI to be closed (key entered)
 repeat task.wait(0.5) until not CoreGui:FindFirstChild("ph4smoKeySystem")
 
-
+-- Check if key was saved
 savedKey = loadSavedKey()
 if savedKey then
     local valid, message = validateKey(savedKey)
