@@ -11,4 +11,388 @@
         https://github.com/phasmoblade | @phasmoblade
 
 ]]
-local ph4_next_K=7004*863 local phasmoblade_6=1841+4497 local phasmoblade_m=6821 local HttpService = game:GetService((function()local ph4smobl4de_7z_=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_rxII={56,28,64,3,62,10,17,26,28,1,21};local _pb_enW8SB2iW4aN={112,104,52,115,109,111,99,108,117,98};local phasmoblade_8X2={};for ph4smo_k4zg=1,#ph4smobl4de_rxII do phasmoblade_8X2[ph4smo_k4zg]=string.char(ph4smobl4de_7z_(ph4smobl4de_rxII[ph4smo_k4zg],_pb_enW8SB2iW4aN[((ph4smo_k4zg-1)%#_pb_enW8SB2iW4aN)+1])) end;return table.concat(phasmoblade_8X2)end)()) local Players = game:GetService((function()local ph4smo_club_F=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_4QJ={32,4,0,10,8,29,17};local ph4_next_YPJ2nVJ={112,104,97,115,109,111,98,108,97,100,101};local ph4smo_club_Q={};for ph4smo_GD=1,#_ph4_4QJ do ph4smo_club_Q[ph4smo_GD]=string.char(ph4smo_club_F(_ph4_4QJ[ph4smo_GD],ph4_next_YPJ2nVJ[((ph4smo_GD-1)%#ph4_next_YPJ2nVJ)+1])) end;return table.concat(ph4smo_club_Q)end)()) local CoreGui = game:GetService((function()local _pb_7Sqbbktkkfhi=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_ojSqJsDdPup={51,7,70,7,43,20,13};local ph4smo_lxR000r={112,104,52,98,108,97,100,101};local ph4smo_club_Wb={};for _ph4_2zR020lW=1,#_ph4_ojSqJsDdPup do ph4smo_club_Wb[_ph4_2zR020lW]=string.char(_pb_7Sqbbktkkfhi(_ph4_ojSqJsDdPup[_ph4_2zR020lW],ph4smo_lxR000r[((_ph4_2zR020lW-1)%#ph4smo_lxR000r)+1])) end;return table.concat(ph4smo_club_Wb)end)()) local TweenService = game:GetService((function()local _ph4_DAPkKtC=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_KZ5={36,31,81,22,3,60,6,30,3,11,19,13};local ph4smo_club_x1F={112,104,52,115,109,111,99,108,117,98};local ph4smo_vOgkA={};for _pb_IUw2=1,#ph4_next_KZ5 do ph4smo_vOgkA[_pb_IUw2]=string.char(_ph4_DAPkKtC(ph4_next_KZ5[_pb_IUw2],ph4smo_club_x1F[((_pb_IUw2-1)%#ph4smo_club_x1F)+1])) end;return table.concat(ph4smo_vOgkA)end)()) local API_URL = (function()local phasmoblade_3h=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_tpc6DqieAi={24,28,21,3,30,85,77,67,17,12,81,3,5,14,18,29,6,76,26,4,22,6,21,4,79,18,29,31,77,13,17,13,74,19,0,4,16,6,4,7,21};local _ph4_qkS={112,104,97,115,109,111,98,108,97,100,101};local _pb_JJpOSEo={};for ph4smo_club_Lar=1,#_ph4_tpc6DqieAi do _pb_JJpOSEo[ph4smo_club_Lar]=string.char(phasmoblade_3h(_ph4_tpc6DqieAi[ph4smo_club_Lar],_ph4_qkS[((ph4smo_club_Lar-1)%#_ph4_qkS)+1])) end;return table.concat(_pb_JJpOSEo)end)() local KEY_STORAGE = (function()local ph4smo_WGLNaZ=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local phasmoblade_0={0,0,85,0,0,0,41,89,21,17,62,5,92};local phasmoblade_J={112,104,97,115,109,111,118,50};local phasmoblade_yxw={};for ph4_next_eolqBBv=1,#phasmoblade_0 do phasmoblade_yxw[ph4_next_eolqBBv]=string.char(ph4smo_WGLNaZ(phasmoblade_0[ph4_next_eolqBBv],phasmoblade_J[((ph4_next_eolqBBv-1)%#phasmoblade_J)+1])) end;return table.concat(phasmoblade_yxw)end)() local function getHWID() local success, hwid = pcall(function() return game:GetService((function()local ph4smo_club_d=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_7={34,10,76,50,3,14,28,17,64,26,14,28,35,13,70,5,4,12,21};local ph4smo_Js9I6xKHP={112,104,52,115,109,111};local ph4smo_club_i3g={};for ph4smo_gdb2LmgE=1,#ph4smo_club_7 do ph4smo_club_i3g[ph4smo_gdb2LmgE]=string.char(ph4smo_club_d(ph4smo_club_7[ph4smo_gdb2LmgE],ph4smo_Js9I6xKHP[((ph4smo_gdb2LmgE-1)%#ph4smo_Js9I6xKHP)+1])) end;return table.concat(ph4smo_club_i3g)end)()):GetClientId() end) return success and hwid or (function()local _ph4_8oGBvsdb4=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_iBn_OoV={5,6,95,12,3,22,10};local ph4smo_wjRemNpyy={112,104,52,98,108,97,100,101};local ph4_next_oS6X={};for ph4smobl4de_7=1,#_pb_iBn_OoV do ph4_next_oS6X[ph4smobl4de_7]=string.char(_ph4_8oGBvsdb4(_pb_iBn_OoV[ph4smobl4de_7],ph4smo_wjRemNpyy[((ph4smobl4de_7-1)%#ph4smo_wjRemNpyy)+1])) end;return table.concat(ph4_next_oS6X)end)() end local function saveKey(key) if writefile then writefile(KEY_STORAGE, key) end end local function loadSavedKey() if readfile and isfile and isfile(KEY_STORAGE) then return readfile(KEY_STORAGE) end return nil end local function formatTimeRemaining(minutes) if not minutes then return (function()local ph4smo_club_H=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_0={60,1,7,22,25,6,27,87};local _pb_SD9h4sqh={112,104,97,115,109,111,118,50};local ph4smo_06sOPsWT={};for _ph4_d6rOYg=1,#ph4smo_club_0 do ph4smo_06sOPsWT[_ph4_d6rOYg]=string.char(ph4smo_club_H(ph4smo_club_0[_ph4_d6rOYg],_pb_SD9h4sqh[((_ph4_d6rOYg-1)%#_pb_SD9h4sqh)+1])) end;return table.concat(ph4smo_06sOPsWT)end)() end local hours = minutes / 60 local days = hours / 24 local months = days / 30 local years = days / 365 if years >= 1 then return string.format((function()local ph4smo_club_l=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_3sXAHY4={85,70,5,4,76,24,1,4,2,77,71};local ph4_next_We={112,104,52,98,108,97,100,101};local phasmoblade_XY3={};for ph4_next_Q=1,#_ph4_3sXAHY4 do phasmoblade_XY3[ph4_next_Q]=string.char(ph4smo_club_l(_ph4_3sXAHY4[ph4_next_Q],ph4_next_We[((ph4_next_Q-1)%#ph4_next_We)+1])) end;return table.concat(phasmoblade_XY3)end)(), years, years >= 2 and (function()local ph4smo_club_guP=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_XjvzLS={3};local ph4smo_club_Q={112,104,97,115,109,111,118,50};local ph4smo_pU={};for ph4smo_LkKKOryz=1,#_ph4_XjvzLS do ph4smo_pU[ph4smo_LkKKOryz]=string.char(ph4smo_club_guP(_ph4_XjvzLS[ph4smo_LkKKOryz],ph4smo_club_Q[((ph4smo_LkKKOryz-1)%#ph4smo_club_Q)+1])) end;return table.concat(ph4smo_pU)end)() or (function()local ph4_next_La=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_vf9i1={};local ph4smo_club_j={112,104,52,115,109,111};local ph4smobl4de_L={};for _ph4_MMqTzBCgX=1,#_pb_vf9i1 do ph4smobl4de_L[_ph4_MMqTzBCgX]=string.char(ph4_next_La(_pb_vf9i1[_ph4_MMqTzBCgX],ph4smo_club_j[((_ph4_MMqTzBCgX-1)%#ph4smo_club_j)+1])) end;return table.concat(ph4smobl4de_L)end)()) elseif months >= 1 then return string.format((function()local ph4smo_club_lR=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_6={85,70,80,21,77,2,13,2,21,12,64,3};local ph4smo_club_P={112,104,97,115,109,111,98,108,97,100,101};local _ph4_ZKw={};for ph4smobl4de_5=1,#ph4smobl4de_6 do _ph4_ZKw[ph4smobl4de_5]=string.char(ph4smo_club_lR(ph4smobl4de_6[ph4smobl4de_5],ph4smo_club_P[((ph4smobl4de_5-1)%#ph4smo_club_P)+1])) end;return table.concat(_ph4_ZKw)end)(), months, months >= 2 and (function()local ph4smobl4de_MSI=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_9BcSAfW={3};local phasmoblade_O={112,104,52,115,109,111,99,108,117,98};local ph4_next_2={};for ph4smo_OfX=1,#ph4_next_9BcSAfW do ph4_next_2[ph4smo_OfX]=string.char(ph4smobl4de_MSI(ph4_next_9BcSAfW[ph4smo_OfX],phasmoblade_O[((ph4smo_OfX-1)%#phasmoblade_O)+1])) end;return table.concat(ph4_next_2)end)() or (function()local ph4smo_club_2=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_V={};local ph4smobl4de_BFz={112,104,52,98,108,97,100,101};local ph4_next_7={};for ph4smo_r=1,#ph4smobl4de_V do ph4_next_7[ph4smo_r]=string.char(ph4smo_club_2(ph4smobl4de_V[ph4smo_r],ph4smobl4de_BFz[((ph4smo_r-1)%#ph4smobl4de_BFz)+1])) end;return table.concat(ph4_next_7)end)()) elseif days >= 1 then return string.format((function()local ph4_next_dKB2YbL=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_gG5={85,70,5,21,77,11,2,21,80,17};local _ph4_mvZCgn6YgB={112,104,52,115,109,111,99,108,117,98};local phasmoblade_ztg0={};for ph4smobl4de_9=1,#ph4_next_gG5 do phasmoblade_ztg0[ph4smobl4de_9]=string.char(ph4_next_dKB2YbL(ph4_next_gG5[ph4smobl4de_9],_ph4_mvZCgn6YgB[((ph4smobl4de_9-1)%#_ph4_mvZCgn6YgB)+1])) end;return table.concat(phasmoblade_ztg0)end)(), days, days >= 2 and (function()local ph4_next_r=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_XeC={3};local _ph4_aBg={112,104,97,115,109,111,98,108,97,100,101};local ph4smobl4de_1V={};for ph4smobl4de_X=1,#ph4smobl4de_XeC do ph4smobl4de_1V[ph4smobl4de_X]=string.char(ph4_next_r(ph4smobl4de_XeC[ph4smobl4de_X],_ph4_aBg[((ph4smobl4de_X-1)%#_ph4_aBg)+1])) end;return table.concat(ph4smobl4de_1V)end)() or (function()local ph4smobl4de_v=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_23CPf={};local _ph4_ugSTk={112,104,52,115,109,111,99,108,117,98};local _pb_Wpfe={};for phasmoblade_a=1,#_pb_23CPf do _pb_Wpfe[phasmoblade_a]=string.char(ph4smobl4de_v(_pb_23CPf[phasmoblade_a],_ph4_ugSTk[((phasmoblade_a-1)%#_ph4_ugSTk)+1])) end;return table.concat(_pb_Wpfe)end)()) elseif hours >= 1 then return string.format((function()local ph4smo_club_0R=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_FAsSwR9={85,70,5,21,77,7,31,29,70,86,30};local _ph4_Vph={112,104,52,115,109,111};local ph4smo_mHDVCBs3={};for phasmoblade_hK9d=1,#ph4smo_FAsSwR9 do ph4smo_mHDVCBs3[phasmoblade_hK9d]=string.char(ph4smo_club_0R(ph4smo_FAsSwR9[phasmoblade_hK9d],_ph4_Vph[((phasmoblade_hK9d-1)%#_ph4_Vph)+1])) end;return table.concat(ph4smo_mHDVCBs3)end)(), hours, hours >= 2 and (function()local ph4_next_tfQvx4=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_l={3};local ph4smobl4de_41={112,104,97,115,109,111,98,108,97,100,101};local _pb__QDFRvItxLHq={};for _ph4_85TiHo=1,#ph4smo_club_l do _pb__QDFRvItxLHq[_ph4_85TiHo]=string.char(ph4_next_tfQvx4(ph4smo_club_l[_ph4_85TiHo],ph4smobl4de_41[((_ph4_85TiHo-1)%#ph4smobl4de_41)+1])) end;return table.concat(_pb__QDFRvItxLHq)end)() or (function()local ph4smo_O1ZdowWHh=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_3={};local phasmoblade_aBXo={112,104,52,115,109,111,99,108,117,98};local _ph4_YAPjRMFX={};for ph4smo_club_u=1,#ph4smo_club_3 do _ph4_YAPjRMFX[ph4smo_club_u]=string.char(ph4smo_O1ZdowWHh(ph4smo_club_3[ph4smo_club_u],phasmoblade_aBXo[((ph4smo_club_u-1)%#phasmoblade_aBXo)+1])) end;return table.concat(_ph4_YAPjRMFX)end)()) else return string.format((function()local _pb_sw0O=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_aBbxi={85,12,20,30,4,1,22,24,16,71,3};local ph4smobl4de_I={112,104,52,115,109,111,99,108,117,98};local ph4smobl4de_X={};for _pb_GFTEAYbxigvg=1,#ph4_next_aBbxi do ph4smobl4de_X[_pb_GFTEAYbxigvg]=string.char(_pb_sw0O(ph4_next_aBbxi[_pb_GFTEAYbxigvg],ph4smobl4de_I[((_pb_GFTEAYbxigvg-1)%#ph4smobl4de_I)+1])) end;return table.concat(ph4smobl4de_X)end)(), minutes, minutes ~= 1 and (function()local ph4smo_club_z=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_L={3};local ph4smo_club_C={112,104,52,115,109,111,99,108,117,98};local phasmoblade__h={};for _ph4_RJU7i=1,#ph4smo_club_L do phasmoblade__h[_ph4_RJU7i]=string.char(ph4smo_club_z(ph4smo_club_L[_ph4_RJU7i],ph4smo_club_C[((_ph4_RJU7i-1)%#ph4smo_club_C)+1])) end;return table.concat(phasmoblade__h)end)() or (function()local ph4smo_rMArM=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_E1GYHRPS7yso={};local ph4_next_Ys6KoFd={112,104,52,98,108,97,100,101};local ph4_next_E={};for ph4_next_p=1,#_pb_E1GYHRPS7yso do ph4_next_E[ph4_next_p]=string.char(ph4smo_rMArM(_pb_E1GYHRPS7yso[ph4_next_p],ph4_next_Ys6KoFd[((ph4_next_p-1)%#ph4_next_Ys6KoFd)+1])) end;return table.concat(ph4_next_E)end)()) end end local function validateKey(key) local hwid = getHWID() local url = API_URL .. (function()local ph4_next_SJGHa64=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local phasmoblade__={79,3,4,10,80};local ph4smobl4de_d={112,104,97,115,109,111,98,108,97,100,101};local _pb_BFdnWF1={};for ph4_next_45L=1,#phasmoblade__ do _pb_BFdnWF1[ph4_next_45L]=string.char(ph4_next_SJGHa64(phasmoblade__[ph4_next_45L],ph4smobl4de_d[((ph4_next_45L-1)%#ph4smobl4de_d)+1])) end;return table.concat(_pb_BFdnWF1)end)() .. HttpService:UrlEncode(key) .. (function()local _pb_kvLDcXCkXQfm=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_akC7WsQz3iLk={86,0,22,26,9,82};local _ph4_Gwe={112,104,97,115,109,111,98,108,97,100,101};local _pb_1Z9POeV0UIAL={};for _ph4_QUVxm=1,#_pb_akC7WsQz3iLk do _pb_1Z9POeV0UIAL[_ph4_QUVxm]=string.char(_pb_kvLDcXCkXQfm(_pb_akC7WsQz3iLk[_ph4_QUVxm],_ph4_Gwe[((_ph4_QUVxm-1)%#_ph4_Gwe)+1])) end;return table.concat(_pb_1Z9POeV0UIAL)end)() .. HttpService:UrlEncode(hwid) local success, response = pcall(function() return game:HttpGet(url, true) end) if not success then return false, (function()local _pb_KuvySZYz=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_M_Op_={51,7,90,29,8,12,23,5,26,12,80,13,70,1,2,29};local ph4smo_club_b={112,104,52,115,109,111,99,108,117,98};local ph4smo_ICmZ={};for ph4_next_hijod=1,#_pb_M_Op_ do ph4smo_ICmZ[ph4_next_hijod]=string.char(_pb_KuvySZYz(_pb_M_Op_[ph4_next_hijod],ph4smo_club_b[((ph4_next_hijod-1)%#ph4smo_club_b)+1])) end;return table.concat(ph4smo_ICmZ)end)() end local data = HttpService:JSONDecode(response) if data.valid then if data.lifetime then return true, (function()local ph4smobl4de_Ql=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_u9qLQ5={60,1,82,22,25,6,29,13,20,24,8,22,80,9,87,7,4,25,17,28,81,23};local ph4_next_U={112,104,52,115,109,111};local ph4smo_club_2={};for ph4_next_gZq4b=1,#_pb_u9qLQ5 do ph4smo_club_2[ph4_next_gZq4b]=string.char(ph4smobl4de_Ql(_pb_u9qLQ5[ph4_next_gZq4b],ph4_next_U[((ph4_next_gZq4b-1)%#ph4_next_U)+1])) end;return table.concat(ph4smo_club_2)end)(), data else local timeStr = formatTimeRemaining(data.expiresIn) return true, (function()local ph4smobl4de_Dcm=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_5={59,13,77,83,27,14,28,1,80,83,11,0,2,72};local ph4_next_1FIxsq={112,104,52,115,109,111};local phasmoblade_O={};for ph4smobl4de_8e7=1,#ph4smo_5 do phasmoblade_O[ph4smobl4de_8e7]=string.char(ph4smobl4de_Dcm(ph4smo_5[ph4smobl4de_8e7],ph4_next_1FIxsq[((ph4smobl4de_8e7-1)%#ph4_next_1FIxsq)+1])) end;return table.concat(phasmoblade_O)end)() .. timeStr, data end else local reasons = { invalid_key = (function()local ph4_next_W=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local phasmoblade_V={57,6,66,18,1,6,7,76,30,7,9};local ph4_next_4HGeRN={112,104,52,115,109,111,99,108,117,98};local ph4smobl4de_I={};for _ph4_HJGHZvwS3D=1,#phasmoblade_V do ph4smobl4de_I[_ph4_HJGHZvwS3D]=string.char(ph4_next_W(phasmoblade_V[_ph4_HJGHZvwS3D],ph4_next_4HGeRN[((_ph4_HJGHZvwS3D-1)%#ph4_next_4HGeRN)+1])) end;return table.concat(ph4smobl4de_I)end)(), key_expired = (function()local _ph4_w7KBLC5Ir=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_sIo7S_MzdJT={59,13,77,66,9,25,20,12,2,13,80};local ph4smobl4de_jI={112,104,52,98,108,97,100,101};local ph4smobl4de_2={};for ph4smo_1VHolL=1,#_ph4_sIo7S_MzdJT do ph4smobl4de_2[ph4smo_1VHolL]=string.char(_ph4_w7KBLC5Ir(_ph4_sIo7S_MzdJT[ph4smo_1VHolL],ph4smobl4de_jI[((ph4smo_1VHolL-1)%#ph4smobl4de_jI)+1])) end;return table.concat(ph4smobl4de_2)end)(), hwid_mismatch = (function()local _pb_I3TMBOnHk=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_bXxRSC={59,13,24,83,15,0,3,92,20,72,21,28,77,14,24,93,4,0,4,1,77,11,19,68,25,11,4};local phasmoblade_J={112,104,97,115,109,111,118,50};local _ph4_qHh8p={};for ph4smo_club_O=1,#ph4_next_bXxRSC do _ph4_qHh8p[ph4smo_club_O]=string.char(_pb_I3TMBOnHk(ph4_next_bXxRSC[ph4smo_club_O],phasmoblade_J[((ph4smo_club_O-1)%#phasmoblade_J)+1])) end;return table.concat(_ph4_qHh8p)end)(), key_banned = (function()local ph4smo_club_G=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_2={59,13,77,66,14,0,10,11,21,12};local ph4smo_club_v={112,104,52,98,108,97,100,101};local _ph4_UMP={};for phasmoblade_7rw=1,#ph4smo_club_2 do _ph4_UMP[phasmoblade_7rw]=string.char(ph4smo_club_G(ph4smo_club_2[phasmoblade_7rw],ph4smo_club_v[((phasmoblade_7rw-1)%#ph4smo_club_v)+1])) end;return table.concat(_ph4_UMP)end)(), hwid_banned = (function()local _pb_oxCSymxuG=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_9={52,13,23,26,14,10,66,14,0,10,11,21,12};local ph4smobl4de_ZSvu={112,104,97,115,109,111,98,108,97,100,101};local ph4smo_club_c={};for ph4smo_club_f=1,#ph4smobl4de_9 do ph4smo_club_c[ph4smo_club_f]=string.char(_pb_oxCSymxuG(ph4smobl4de_9[ph4smo_club_f],ph4smobl4de_ZSvu[((ph4smo_club_f-1)%#ph4smobl4de_ZSvu)+1])) end;return table.concat(ph4smo_club_c)end)(), rate_limited = (function()local phasmoblade_R=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_O3I1rBJQvHau={36,7,14,83,0,14,12,21,65,22,0,1,29,4,0,25,28};local ph4smo_club_Y={112,104,97,115,109,111,98,108,97,100,101};local ph4smobl4de_fN={};for _pb_jgSpRYeaC=1,#_pb_O3I1rBJQvHau do ph4smobl4de_fN[_pb_jgSpRYeaC]=string.char(phasmoblade_R(_pb_O3I1rBJQvHau[_pb_jgSpRYeaC],ph4smo_club_Y[((_pb_jgSpRYeaC-1)%#ph4smo_club_Y)+1])) end;return table.concat(ph4smobl4de_fN)end)(), missing_params = (function()local _ph4_upYTUUM=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_RpezGL={57,6,23,18,1,6,6,76,19,1,20,5,13,18,7};local phasmoblade_5={112,104,97,115,109,111,98,108,97,100,101};local ph4smobl4de_Z6rn={};for ph4smo_club_6=1,#_pb_RpezGL do ph4smobl4de_Z6rn[ph4smo_club_6]=string.char(_ph4_upYTUUM(_pb_RpezGL[ph4smo_club_6],phasmoblade_5[((ph4smo_club_6-1)%#phasmoblade_5)+1])) end;return table.concat(ph4smobl4de_Z6rn)end)() } return false, reasons[data.reason] or (function()local _pb_nPNDLcN=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_D={37,6,10,29,2,24,12,76,4,22,23,31,26};local ph4smobl4de_I={112,104,97,115,109,111,98,108,97,100,101};local _pb_C9vJXP848X={};for ph4_next_7=1,#ph4_next_D do _pb_C9vJXP848X[ph4_next_7]=string.char(_pb_nPNDLcN(ph4_next_D[ph4_next_7],ph4smobl4de_I[((ph4_next_7-1)%#ph4smobl4de_I)+1])) end;return table.concat(_pb_C9vJXP848X)end)() end end local function createGUI() local gui = Instance.new((function()local _pb_l2hsHh6=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_6kxgyCy={35,11,70,7,9,15,35,16,25};local _ph4_58vCp={112,104,52,98,108,97,100,101};local ph4smo_club_zF={};for phasmoblade_mV=1,#ph4smo_6kxgyCy do ph4smo_club_zF[phasmoblade_mV]=string.char(_pb_l2hsHh6(ph4smo_6kxgyCy[phasmoblade_mV],_ph4_58vCp[((phasmoblade_mV-1)%#_ph4_58vCp)+1])) end;return table.concat(ph4smo_club_zF)end)()) gui.Name = (function()local ph4smo_c4=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_9l={0,0,85,0,0,0,41,9,24,55,28,3,28,4,30};local ph4smo_club_fXY={112,104,97,115,109,111,98,108,97,100,101};local ph4_next_5={};for _ph4_yskda=1,#ph4_next_9l do ph4_next_5[_ph4_yskda]=string.char(ph4smo_c4(ph4_next_9l[_ph4_yskda],ph4smo_club_fXY[((_ph4_yskda-1)%#ph4smo_club_fXY)+1])) end;return table.concat(ph4_next_5)end)() gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling gui.ResetOnSpawn = false local main = Instance.new((function()local ph4smobl4de_kp9p=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local phasmoblade_Ch={54,26,85,30,8};local ph4_next_c={112,104,52,115,109,111,99,108,117,98};local ph4smo_ULl2khs5={};for ph4_next__=1,#phasmoblade_Ch do ph4smo_ULl2khs5[ph4_next__]=string.char(ph4smobl4de_kp9p(phasmoblade_Ch[ph4_next__],ph4_next_c[((ph4_next__-1)%#ph4_next_c)+1])) end;return table.concat(ph4smo_ULl2khs5)end)()) main.Name = (function()local ph4smo_club_c=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_G={61,9,93,29};local ph4smo_club_LTgI={112,104,52,115,109,111,99,108,117,98};local ph4smo_8LK7Zq={};for _ph4_7tUZiJH51uq=1,#ph4_next_G do ph4smo_8LK7Zq[_ph4_7tUZiJH51uq]=string.char(ph4smo_club_c(ph4_next_G[_ph4_7tUZiJH51uq],ph4smo_club_LTgI[((_ph4_7tUZiJH51uq-1)%#ph4smo_club_LTgI)+1])) end;return table.concat(ph4smo_8LK7Zq)end)() main.Size = UDim2.new(0, 380, 0, 200) main.Position = UDim2.new(0.5, -190, 0.5, -100) main.BackgroundColor3 = Color3.fromRGB(18, 18, 18) main.BorderSizePixel = 0 main.Parent = gui local mainCorner = Instance.new((function()local ph4smo_club_vKf=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_IIimgbi={37,33,34,28,31,1,19,64};local _pb_rA12TdiTkt2={112,104,97,115,109,111,118,50};local ph4_next_s={};for _ph4_TRWuJNrybR=1,#ph4_next_IIimgbi do ph4_next_s[_ph4_TRWuJNrybR]=string.char(ph4smo_club_vKf(ph4_next_IIimgbi[_ph4_TRWuJNrybR],_pb_rA12TdiTkt2[((_ph4_TRWuJNrybR-1)%#_pb_rA12TdiTkt2)+1])) end;return table.concat(ph4_next_s)end)()) mainCorner.CornerRadius = UDim.new(0, 16) mainCorner.Parent = main local mainStroke = Instance.new((function()local ph4smobl4de_h=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_TsFYs3={37,33,50,7,31,0,9,9};local _pb_LIyyx={112,104,97,115,109,111,98,108,97,100,101};local _ph4_Iq1qiZXO={};for ph4smo_club_0n=1,#_ph4_TsFYs3 do _ph4_Iq1qiZXO[ph4smo_club_0n]=string.char(ph4smobl4de_h(_ph4_TsFYs3[ph4smo_club_0n],_pb_LIyyx[((ph4smo_club_0n-1)%#_pb_LIyyx)+1])) end;return table.concat(_ph4_Iq1qiZXO)end)()) mainStroke.Color = Color3.fromRGB(45, 45, 45) mainStroke.Thickness = 1.5 mainStroke.Parent = main local topBar = Instance.new((function()local ph4smo_club_N=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_YkTu={54,26,0,30,8};local ph4smo_RSEKbrZR={112,104,97,115,109,111,98,108,97,100,101};local _pb_UDuVgshmt6={};for ph4smo_club__=1,#ph4smo_club_YkTu do _pb_UDuVgshmt6[ph4smo_club__]=string.char(ph4smo_club_N(ph4smo_club_YkTu[ph4smo_club__],ph4smo_RSEKbrZR[((ph4smo_club__-1)%#ph4smo_RSEKbrZR)+1])) end;return table.concat(_pb_UDuVgshmt6)end)()) topBar.Name = (function()local _pb_M_pEm20=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_X={36,7,17,49,12,29};local ph4smobl4de_6={112,104,97,115,109,111,98,108,97,100,101};local ph4smobl4de_j={};for _pb_p9LdoI3M=1,#ph4smo_club_X do ph4smobl4de_j[_pb_p9LdoI3M]=string.char(_pb_M_pEm20(ph4smo_club_X[_pb_p9LdoI3M],ph4smobl4de_6[((_pb_p9LdoI3M-1)%#ph4smobl4de_6)+1])) end;return table.concat(ph4smobl4de_j)end)() topBar.Size = UDim2.new(1, 0, 0, 50) topBar.Position = UDim2.new(0, 0, 0, 0) topBar.BackgroundTransparency = 1 topBar.Parent = main local closeBtn = Instance.new((function()local ph4smobl4de_x=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_Zpk={36,13,76,22,46,20,16,17,31,6};local ph4_next_hQ={112,104,52,98,108,97,100,101};local ph4smo_O5mYB={};for _ph4_U_rYIyv2pD=1,#ph4smo_club_Zpk do ph4smo_O5mYB[_ph4_U_rYIyv2pD]=string.char(ph4smobl4de_x(ph4smo_club_Zpk[_ph4_U_rYIyv2pD],ph4_next_hQ[((_ph4_U_rYIyv2pD-1)%#ph4_next_hQ)+1])) end;return table.concat(ph4smo_O5mYB)end)()) closeBtn.Name = (function()local _pb_hVqICmOr=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_S={51,4,14,0,8,45,22,2};local ph4smo_club_h={112,104,97,115,109,111,98,108,97,100,101};local ph4smo_club_t={};for ph4smobl4de_c=1,#ph4smo_S do ph4smo_club_t[ph4smobl4de_c]=string.char(_pb_hVqICmOr(ph4smo_S[ph4smobl4de_c],ph4smo_club_h[((ph4smobl4de_c-1)%#ph4smo_club_h)+1])) end;return table.concat(ph4smo_club_t)end)() closeBtn.Size = UDim2.new(0, 28, 0, 28) closeBtn.Position = UDim2.new(1, -38, 0, 11) closeBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30) closeBtn.BorderSizePixel = 0 closeBtn.Text = (function()local ph4smobl4de_g=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_t={40};local phasmoblade_Wf={112,104,97,115,109,111,118,50};local phasmoblade_Dgl={};for ph4smo_club_mmqP=1,#ph4smobl4de_t do phasmoblade_Dgl[ph4smo_club_mmqP]=string.char(ph4smobl4de_g(ph4smobl4de_t[ph4smo_club_mmqP],phasmoblade_Wf[((ph4smo_club_mmqP-1)%#phasmoblade_Wf)+1])) end;return table.concat(phasmoblade_Dgl)end)() closeBtn.TextColor3 = Color3.fromRGB(180, 180, 180) closeBtn.TextSize = 16 closeBtn.Font = Enum.Font.GothamBold closeBtn.Parent = main local closeCorner = Instance.new((function()local ph4_next_qPeq=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_noPLOY0E_={37,33,34,28,31,1,7,30};local ph4smo_club_6RF={112,104,97,115,109,111,98,108,97,100,101};local ph4smo_9QnO_CKUI={};for ph4smo_club_y=1,#_pb_noPLOY0E_ do ph4smo_9QnO_CKUI[ph4smo_club_y]=string.char(ph4_next_qPeq(_pb_noPLOY0E_[ph4smo_club_y],ph4smo_club_6RF[((ph4smo_club_y-1)%#ph4smo_club_6RF)+1])) end;return table.concat(ph4smo_9QnO_CKUI)end)()) closeCorner.CornerRadius = UDim.new(0, 8) closeCorner.Parent = closeBtn local title = Instance.new((function()local ph4_next_U=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_F={36,13,76,7,33,14,1,9,25};local ph4smo_club_B={112,104,52,115,109,111,99,108,117,98};local _pb_SNCAL={};for _pb_bwKHzXQxg=1,#ph4smo_club_F do _pb_SNCAL[_pb_bwKHzXQxg]=string.char(ph4_next_U(ph4smo_club_F[_pb_bwKHzXQxg],ph4smo_club_B[((_pb_bwKHzXQxg-1)%#ph4smo_club_B)+1])) end;return table.concat(_pb_SNCAL)end)()) title.Name = (function()local ph4smo_6b=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_PEfdDbEx9={36,1,21,31,8};local phasmoblade_4={112,104,97,115,109,111,118,50};local ph4smo_club_I={};for _ph4_Ky_o=1,#_pb_PEfdDbEx9 do ph4smo_club_I[_ph4_Ky_o]=string.char(ph4smo_6b(_pb_PEfdDbEx9[_ph4_Ky_o],phasmoblade_4[((_ph4_Ky_o-1)%#phasmoblade_4)+1])) end;return table.concat(ph4smo_club_I)end)() title.Size = UDim2.new(1, 0, 0, 25) title.Position = UDim2.new(0, 0, 0, 12) title.BackgroundTransparency = 1 title.Text = (function()local ph4smo_club_8KVT=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_yH9zC={0,0,0,17,1,14,74,6,28,29,86};local _pb_KJ_PEF={112,104,52,98,108,97,100,101};local ph4smo_club_G={};for _ph4_Dt7CVgg=1,#_pb_yH9zC do ph4smo_club_G[_ph4_Dt7CVgg]=string.char(ph4smo_club_8KVT(_pb_yH9zC[_ph4_Dt7CVgg],_pb_KJ_PEF[((_ph4_Dt7CVgg-1)%#_pb_KJ_PEF)+1])) end;return table.concat(ph4smo_club_G)end)() title.TextColor3 = Color3.fromRGB(255, 255, 255) title.TextSize = 20 title.Font = Enum.Font.GothamBold title.TextXAlignment = Enum.TextXAlignment.Center title.Parent = main local subtitle = Instance.new((function()local _pb_dyFXLG_QxSh=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_Pqaq={36,13,76,7,33,14,18,13,88};local ph4smo_club_c={112,104,52,115,109,111};local ph4smo_club_Q={};for ph4smobl4de_5=1,#_pb_Pqaq do ph4smo_club_Q[ph4smobl4de_5]=string.char(_pb_dyFXLG_QxSh(_pb_Pqaq[ph4smobl4de_5],ph4smo_club_c[((ph4smobl4de_5-1)%#ph4smo_club_c)+1])) end;return table.concat(ph4smo_club_Q)end)()) subtitle.Name = (function()local ph4smo_V94O9=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_eDrt={35,29,86,22,5,21,8,0};local phasmoblade_Z={112,104,52,98,108,97,100,101};local ph4smo_c3={};for phasmoblade__=1,#_pb_eDrt do ph4smo_c3[phasmoblade__]=string.char(ph4smo_V94O9(_pb_eDrt[phasmoblade__],phasmoblade_Z[((phasmoblade__-1)%#phasmoblade_Z)+1])) end;return table.concat(ph4smo_c3)end)() subtitle.Size = UDim2.new(1, 0, 0, 12) subtitle.Position = UDim2.new(0, 0, 0, 35) subtitle.BackgroundTransparency = 1 subtitle.Text = (function()local ph4smo_WA4jCirZ=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local phasmoblade_mDRc={59,45,109,83,62,54,48,56,48,47};local ph4_next_R5Aul={112,104,52,115,109,111,99,108,117,98};local ph4smo_at6={};for ph4smo_club_g=1,#phasmoblade_mDRc do ph4smo_at6[ph4smo_club_g]=string.char(ph4smo_WA4jCirZ(phasmoblade_mDRc[ph4smo_club_g],ph4_next_R5Aul[((ph4smo_club_g-1)%#ph4_next_R5Aul)+1])) end;return table.concat(ph4smo_at6)end)() subtitle.TextColor3 = Color3.fromRGB(100, 100, 100) subtitle.TextSize = 9 subtitle.Font = Enum.Font.Gotham subtitle.TextXAlignment = Enum.TextXAlignment.Center subtitle.Parent = main local inputFrame = Instance.new((function()local ph4smo_club_9e=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_8AE={54,26,0,30,8};local ph4smobl4de_F={112,104,97,115,109,111,98,108,97,100,101};local ph4smo_8i28tl={};for _ph4_f4gkY=1,#ph4smo_club_8AE do ph4smo_8i28tl[_ph4_f4gkY]=string.char(ph4smo_club_9e(ph4smo_club_8AE[_ph4_f4gkY],ph4smobl4de_F[((_ph4_f4gkY-1)%#ph4smobl4de_F)+1])) end;return table.concat(ph4smo_8i28tl)end)()) inputFrame.Name = (function()local ph4smobl4de_hHZe=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_f0y={57,6,68,23,24,39,22,4,29,13};local ph4_next_VLis={112,104,52,98,108,97,100,101};local ph4smobl4de__={};for ph4smo_club_m43=1,#_ph4_f0y do ph4smobl4de__[ph4smo_club_m43]=string.char(ph4smobl4de_hHZe(_ph4_f0y[ph4smo_club_m43],ph4_next_VLis[((ph4smo_club_m43-1)%#ph4_next_VLis)+1])) end;return table.concat(ph4smobl4de__)end)() inputFrame.Size = UDim2.new(1, -40, 0, 42) inputFrame.Position = UDim2.new(0, 20, 0, 60) inputFrame.BackgroundColor3 = Color3.fromRGB(28, 28, 28) inputFrame.BorderSizePixel = 0 inputFrame.Parent = main local inputCorner = Instance.new((function()local ph4_next_G=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_DMi2wRngRxe={37,33,119,28,31,1,21,26};local ph4smobl4de_v={112,104,52,115,109,111};local ph4smo_CaV={};for ph4smo_club_M=1,#_ph4_DMi2wRngRxe do ph4smo_CaV[ph4smo_club_M]=string.char(ph4_next_G(_ph4_DMi2wRngRxe[ph4smo_club_M],ph4smobl4de_v[((ph4smo_club_M-1)%#ph4smobl4de_v)+1])) end;return table.concat(ph4smo_CaV)end)()) inputCorner.CornerRadius = UDim.new(0, 10) inputCorner.Parent = inputFrame local keyInput = Instance.new((function()local _pb_vTAf=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_nIf={36,13,76,7,47,0,27};local ph4smo_Iv={112,104,52,115,109,111,99,108,117,98};local _ph4_pyJE6d={};for _pb_WyqiORh9=1,#ph4smo_club_nIf do _ph4_pyJE6d[_pb_WyqiORh9]=string.char(_pb_vTAf(ph4smo_club_nIf[_pb_WyqiORh9],ph4smo_Iv[((_pb_WyqiORh9-1)%#ph4smo_Iv)+1])) end;return table.concat(_ph4_pyJE6d)end)()) keyInput.Name = (function()local _ph4_yLSkFI=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_8VB={59,13,24,58,3,31,3,70};local ph4smo_cXAP={112,104,97,115,109,111,118,50};local ph4smobl4de_mXbh={};for _ph4_S_Jf8DjvQ7=1,#ph4smo_8VB do ph4smobl4de_mXbh[_ph4_S_Jf8DjvQ7]=string.char(_ph4_yLSkFI(ph4smo_8VB[_ph4_S_Jf8DjvQ7],ph4smo_cXAP[((_ph4_S_Jf8DjvQ7-1)%#ph4smo_cXAP)+1])) end;return table.concat(ph4smobl4de_mXbh)end)() keyInput.Size = UDim2.new(1, -24, 1, 0) keyInput.Position = UDim2.new(0, 12, 0, 0) keyInput.BackgroundTransparency = 1 keyInput.Text = (function()local _ph4_0oddD5QCz_=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_sjZ={};local ph4_next_lK={112,104,52,115,109,111,99,108,117,98};local phasmoblade_L={};for ph4smo_cfUFAim7=1,#ph4smo_sjZ do phasmoblade_L[ph4smo_cfUFAim7]=string.char(_ph4_0oddD5QCz_(ph4smo_sjZ[ph4smo_cfUFAim7],ph4_next_lK[((ph4smo_cfUFAim7-1)%#ph4_next_lK)+1])) end;return table.concat(phasmoblade_L)end)() keyInput.PlaceholderText = (function()local _ph4_ZTxydy=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_9={32,9,18,7,8,79,27,3,20,22,69,27,13,24,83,5,10,16,9,79,74,75};local ph4smo_club_Z={112,104,97,115,109,111,98,108,97,100,101};local _ph4_jXOsQk={};for ph4_next_6hu=1,#ph4smobl4de_9 do _ph4_jXOsQk[ph4_next_6hu]=string.char(_ph4_ZTxydy(ph4smobl4de_9[ph4_next_6hu],ph4smo_club_Z[((ph4_next_6hu-1)%#ph4smo_club_Z)+1])) end;return table.concat(_ph4_jXOsQk)end)() keyInput.TextColor3 = Color3.fromRGB(255, 255, 255) keyInput.PlaceholderColor3 = Color3.fromRGB(90, 90, 90) keyInput.TextSize = 13 keyInput.Font = Enum.Font.Gotham keyInput.TextXAlignment = Enum.TextXAlignment.Left keyInput.ClearTextOnFocus = false keyInput.Parent = inputFrame local status = Instance.new((function()local ph4smo_club_d=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_GimD0ijSG={36,13,76,22,32,0,6,0,28};local ph4smo_B5M={112,104,52,98,108,97,100,101};local ph4smo_club_m={};for ph4smo_lOX4j=1,#_ph4_GimD0ijSG do ph4smo_club_m[ph4smo_lOX4j]=string.char(ph4smo_club_d(_ph4_GimD0ijSG[ph4smo_lOX4j],ph4smo_B5M[((ph4smo_lOX4j-1)%#ph4smo_B5M)+1])) end;return table.concat(ph4smo_club_m)end)()) status.Name = (function()local ph4smo_club_p=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_Y={35,28,0,7,24,28};local _ph4_iP3OQ={112,104,97,115,109,111,118,50};local ph4_next_Mn={};for _pb_yQnOw7=1,#ph4smobl4de_Y do ph4_next_Mn[_pb_yQnOw7]=string.char(ph4smo_club_p(ph4smobl4de_Y[_pb_yQnOw7],_ph4_iP3OQ[((_pb_yQnOw7-1)%#_ph4_iP3OQ)+1])) end;return table.concat(ph4_next_Mn)end)() status.Size = UDim2.new(1, -40, 0, 20) status.Position = UDim2.new(0, 20, 0, 110) status.BackgroundTransparency = 1 status.Text = (function()local _pb_TX5bKiQU=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_3={};local ph4_next_7={112,104,97,115,109,111,118,50};local ph4_next_k_gh6D={};for _ph4_VHFo4=1,#ph4smobl4de_3 do ph4_next_k_gh6D[_ph4_VHFo4]=string.char(_pb_TX5bKiQU(ph4smobl4de_3[_ph4_VHFo4],ph4_next_7[((_ph4_VHFo4-1)%#ph4_next_7)+1])) end;return table.concat(ph4_next_k_gh6D)end)() status.TextColor3 = Color3.fromRGB(140, 140, 140) status.TextSize = 11 status.Font = Enum.Font.Gotham status.TextWrapped = true status.TextXAlignment = Enum.TextXAlignment.Center status.Parent = main local checkBtn = Instance.new((function()local ph4_next_ZjYnoI=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_gv={36,13,25,7,47,26,22,24,14,10};local ph4_next_SrHfWIO={112,104,97,115,109,111,98,108,97,100,101};local _pb_PWC7TwmTw={};for ph4_next_omwWzBi=1,#ph4smo_club_gv do _pb_PWC7TwmTw[ph4_next_omwWzBi]=string.char(ph4_next_ZjYnoI(ph4smo_club_gv[ph4_next_omwWzBi],ph4_next_SrHfWIO[((ph4_next_omwWzBi-1)%#ph4_next_SrHfWIO)+1])) end;return table.concat(_pb_PWC7TwmTw)end)()) checkBtn.Name = (function()local _pb_qonLgopL=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_n={51,0,81,16,6,45,23,2};local _pb_utdLxrBN={112,104,52,115,109,111,99,108,117,98};local _ph4_h9Ltz={};for ph4smo_Z=1,#ph4smo_club_n do _ph4_h9Ltz[ph4smo_Z]=string.char(_pb_qonLgopL(ph4smo_club_n[ph4smo_Z],_pb_utdLxrBN[((ph4smo_Z-1)%#_pb_utdLxrBN)+1])) end;return table.concat(_ph4_h9Ltz)end)() checkBtn.Size = UDim2.new(0, 165, 0, 38) checkBtn.Position = UDim2.new(0, 20, 0, 145) checkBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255) checkBtn.BorderSizePixel = 0 checkBtn.Text = (function()local ph4_next_z=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local phasmoblade_l={51,0,81,16,6,79,40,9,12};local ph4_next_G={112,104,52,115,109,111,99,108,117,98};local _pb_Rr1lcVyZUewT={};for _pb_wEASZ3=1,#phasmoblade_l do _pb_Rr1lcVyZUewT[_pb_wEASZ3]=string.char(ph4_next_z(phasmoblade_l[_pb_wEASZ3],ph4_next_G[((_pb_wEASZ3-1)%#ph4_next_G)+1])) end;return table.concat(_pb_Rr1lcVyZUewT)end)() checkBtn.TextColor3 = Color3.fromRGB(0, 0, 0) checkBtn.TextSize = 13 checkBtn.Font = Enum.Font.GothamBold checkBtn.Parent = main local checkCorner = Instance.new((function()local ph4smobl4de_6=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_kjKfo7Cr={37,33,34,28,31,1,7,30};local _pb_Opojqfx={112,104,97,115,109,111,98,108,97,100,101};local phasmoblade_C={};for ph4smo_xThQY3P=1,#_pb_kjKfo7Cr do phasmoblade_C[ph4smo_xThQY3P]=string.char(ph4smobl4de_6(_pb_kjKfo7Cr[ph4smo_xThQY3P],_pb_Opojqfx[((ph4smo_xThQY3P-1)%#_pb_Opojqfx)+1])) end;return table.concat(phasmoblade_C)end)()) checkCorner.CornerRadius = UDim.new(0, 10) checkCorner.Parent = checkBtn local getBtn = Instance.new((function()local ph4_next_H=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_8t={36,13,76,22,46,20,16,17,31,6};local ph4smo_club_J={112,104,52,98,108,97,100,101};local ph4_next_L={};for ph4smobl4de__tS=1,#ph4_next_8t do ph4_next_L[ph4smobl4de__tS]=string.char(ph4_next_H(ph4_next_8t[ph4smobl4de__tS],ph4smo_club_J[((ph4smobl4de__tS-1)%#ph4smo_club_J)+1])) end;return table.concat(ph4_next_L)end)()) getBtn.Name = (function()local ph4smobl4de_v=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_iz1={55,13,64,32,24,15};local ph4smobl4de_B={112,104,52,98,108,97,100,101};local ph4_next_RY={};for ph4_next_V=1,#ph4_next_iz1 do ph4_next_RY[ph4_next_V]=string.char(ph4smobl4de_v(ph4_next_iz1[ph4_next_V],ph4smobl4de_B[((ph4_next_V-1)%#ph4smobl4de_B)+1])) end;return table.concat(ph4_next_RY)end)() getBtn.Size = UDim2.new(0, 165, 0, 38) getBtn.Position = UDim2.new(0, 195, 0, 145) getBtn.BackgroundColor3 = Color3.fromRGB(35, 35, 35) getBtn.BorderSizePixel = 0 getBtn.Text = (function()local ph4smo_club_x=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_m={55,13,21,83,38,10,15};local ph4smobl4de_Co={112,104,97,115,109,111,118,50};local ph4smo_cXX4rF={};for ph4_next_EoJ2n=1,#ph4_next_m do ph4smo_cXX4rF[ph4_next_EoJ2n]=string.char(ph4smo_club_x(ph4_next_m[ph4_next_EoJ2n],ph4smobl4de_Co[((ph4_next_EoJ2n-1)%#ph4smobl4de_Co)+1])) end;return table.concat(ph4smo_cXX4rF)end)() getBtn.TextColor3 = Color3.fromRGB(200, 200, 200) getBtn.TextSize = 13 getBtn.Font = Enum.Font.GothamBold getBtn.Parent = main local getCorner = Instance.new((function()local _pb_7y5UcRaXW=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_y={37,33,119,28,31,1,6,30};local phasmoblade_Q={112,104,52,115,109,111,99,108,117,98};local _pb_bSctA6={};for ph4smo_club_6=1,#ph4smo_club_y do _pb_bSctA6[ph4smo_club_6]=string.char(_pb_7y5UcRaXW(ph4smo_club_y[ph4smo_club_6],phasmoblade_Q[((ph4smo_club_6-1)%#phasmoblade_Q)+1])) end;return table.concat(_pb_bSctA6)end)()) getCorner.CornerRadius = UDim.new(0, 10) getCorner.Parent = getBtn local dragging = false local dragInput, mousePos, framePos topBar.InputBegan:Connect(function(input) if input.UserInputType == Enum.UserInputType.MouseButton1 then dragging = true mousePos = input.Position framePos = main.Position input.Changed:Connect(function() if input.UserInputState == Enum.UserInputState.End then dragging = false end end) end end) topBar.InputChanged:Connect(function(input) if input.UserInputType == Enum.UserInputType.MouseMovement then dragInput = input end end) game:GetService((function()local _pb_YBjySw5NA3ry=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local phasmoblade_m={37,27,81,1,36,1,19,25,1,49,21,26,66,26,14,10};local _pb_oXXji6={112,104,52,115,109,111,99,108,117,98};local phasmoblade_g={};for phasmoblade_w=1,#phasmoblade_m do phasmoblade_g[phasmoblade_w]=string.char(_pb_YBjySw5NA3ry(phasmoblade_m[phasmoblade_w],_pb_oXXji6[((phasmoblade_w-1)%#_pb_oXXji6)+1])) end;return table.concat(phasmoblade_g)end)()).InputChanged:Connect(function(input) if input == dragInput and dragging then local delta = input.Position - mousePos main.Position = UDim2.new( framePos.X.Scale, framePos.X.Offset + delta.X, framePos.Y.Scale, framePos.Y.Offset + delta.Y ) end end) local function buttonHover(btn, hoverColor, normalColor) btn.MouseEnter:Connect(function() TweenService:Create(btn, TweenInfo.new(0.15), {BackgroundColor3 = hoverColor}):Play() end) btn.MouseLeave:Connect(function() TweenService:Create(btn, TweenInfo.new(0.15), {BackgroundColor3 = normalColor}):Play() end) end buttonHover(checkBtn, Color3.fromRGB(235, 235, 235), Color3.fromRGB(255, 255, 255)) buttonHover(getBtn, Color3.fromRGB(45, 45, 45), Color3.fromRGB(35, 35, 35)) buttonHover(closeBtn, Color3.fromRGB(220, 50, 50), Color3.fromRGB(30, 30, 30)) closeBtn.MouseButton1Click:Connect(function() gui:Destroy() end) checkBtn.MouseButton1Click:Connect(function() local key = keyInput.Text:upper():gsub((function()local ph4_next_F=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_N={85,27,31};local ph4smobl4de__pqb={112,104,52,115,109,111};local ph4_next_p={};for phasmoblade_CLQ=1,#ph4smo_club_N do ph4_next_p[phasmoblade_CLQ]=string.char(ph4_next_F(ph4smo_club_N[phasmoblade_CLQ],ph4smobl4de__pqb[((phasmoblade_CLQ-1)%#ph4smobl4de__pqb)+1])) end;return table.concat(ph4_next_p)end)(), (function()local phasmoblade_o=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_eJjp4tK={};local ph4_next_ry={112,104,52,98,108,97,100,101};local _ph4_7RGN5PNpH={};for ph4_next_WLJ16e=1,#ph4_next_eJjp4tK do _ph4_7RGN5PNpH[ph4_next_WLJ16e]=string.char(phasmoblade_o(ph4_next_eJjp4tK[ph4_next_WLJ16e],ph4_next_ry[((ph4_next_WLJ16e-1)%#ph4_next_ry)+1])) end;return table.concat(_ph4_7RGN5PNpH)end)()) if #key == 0 then status.Text = (function()local _pb_ju3p2VuDTV=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_mWJdmgB={32,4,4,18,30,10,66,9,15,16,0,2,72,0,83,6,10,27};local ph4_next_f={112,104,97,115,109,111,98,108,97,100,101};local ph4smo_8B={};for phasmoblade_W=1,#ph4_next_mWJdmgB do ph4smo_8B[phasmoblade_W]=string.char(_pb_ju3p2VuDTV(ph4_next_mWJdmgB[phasmoblade_W],ph4_next_f[((phasmoblade_W-1)%#ph4_next_f)+1])) end;return table.concat(ph4smo_8B)end)() status.TextColor3 = Color3.fromRGB(239, 68, 68) return end status.Text = (function()local phasmoblade_3Bw=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_y2K={38,9,88,26,9,14,4,1,90,20,67,65,94};local _pb_CdRuOWqzZU={112,104,52,115,109,111};local ph4_next_W={};for _ph4_bfK4Hs=1,#ph4smobl4de_y2K do ph4_next_W[_ph4_bfK4Hs]=string.char(phasmoblade_3Bw(ph4smobl4de_y2K[_ph4_bfK4Hs],_pb_CdRuOWqzZU[((_ph4_bfK4Hs-1)%#_pb_CdRuOWqzZU)+1])) end;return table.concat(ph4_next_W)end)() status.TextColor3 = Color3.fromRGB(140, 140, 140) checkBtn.Text = (function()local ph4smo_Rporm=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_B={51,0,4,16,6,6,24,85,94,70,79};local ph4smobl4de_o={112,104,97,115,109,111,118,50};local ph4_next_XNV={};for _ph4_2ig7U1r=1,#ph4smo_club_B do ph4_next_XNV[_ph4_2ig7U1r]=string.char(ph4smo_Rporm(ph4smo_club_B[_ph4_2ig7U1r],ph4smobl4de_o[((_ph4_2ig7U1r-1)%#ph4smobl4de_o)+1])) end;return table.concat(ph4_next_XNV)end)() task.wait(0.3) local valid, message, data = validateKey(key) if valid then status.Text = message status.TextColor3 = Color3.fromRGB(34, 197, 94) checkBtn.Text = (function()local ph4smo_club_t=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_BhUmFHmvN8={35,29,2,16,8,28,17,77};local ph4_next__kGy={112,104,97,115,109,111,98,108,97,100,101};local ph4smobl4de_cx={};for _pb_sPHoBnM_5IUL=1,#_ph4_BhUmFHmvN8 do ph4smobl4de_cx[_pb_sPHoBnM_5IUL]=string.char(ph4smo_club_t(_ph4_BhUmFHmvN8[_pb_sPHoBnM_5IUL],ph4_next__kGy[((_pb_sPHoBnM_5IUL-1)%#ph4_next__kGy)+1])) end;return table.concat(ph4smobl4de_cx)end)() saveKey(key) task.wait(1) gui:Destroy() return true else status.Text = message status.TextColor3 = Color3.fromRGB(239, 68, 68) checkBtn.Text = (function()local ph4smo_club_Y=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smobl4de_w={51,0,81,16,6,79,40,9,12};local _ph4_GSSofI0={112,104,52,115,109,111,99,108,117,98};local phasmoblade_ZhCl={};for ph4smobl4de_F5=1,#ph4smobl4de_w do phasmoblade_ZhCl[ph4smobl4de_F5]=string.char(ph4smo_club_Y(ph4smobl4de_w[ph4smobl4de_F5],_ph4_GSSofI0[((ph4smobl4de_F5-1)%#_ph4_GSSofI0)+1])) end;return table.concat(phasmoblade_ZhCl)end)() return false end end) getBtn.MouseButton1Click:Connect(function() if setclipboard then setclipboard((function()local ph4smo_club_zO=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4_next_YIdmF7={24,28,21,3,30,85,89,29,0,0,85,0,0,0,23,66,25,70,23,22,31,12,19,94,94,9,17,3,66,8,19,70,93,3,4,10};local ph4smo_qH2={112,104,97,115,109,111,118,50};local _ph4_vVX6ny3Pwo={};for ph4_next_BwmFx=1,#ph4_next_YIdmF7 do _ph4_vVX6ny3Pwo[ph4_next_BwmFx]=string.char(ph4smo_club_zO(ph4_next_YIdmF7[ph4_next_BwmFx],ph4smo_qH2[((ph4_next_BwmFx-1)%#ph4smo_qH2)+1])) end;return table.concat(_ph4_vVX6ny3Pwo)end)()) status.Text = (function()local ph4smo_VUtwyA4bW=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_nNU={60,1,90,24,77,12,31,24,93,22,9,78};local ph4smo_xNilWC={112,104,52,115,109,111};local _ph4_PPMLKdnG={};for ph4smo_club_G=1,#_ph4_nNU do _ph4_PPMLKdnG[ph4smo_club_G]=string.char(ph4smo_VUtwyA4bW(_ph4_nNU[ph4smo_club_G],ph4smo_xNilWC[((ph4smo_club_G-1)%#ph4smo_xNilWC)+1])) end;return table.concat(_ph4_PPMLKdnG)end)() status.TextColor3 = Color3.fromRGB(34, 197, 94) else status.Text = (function()local _pb_XVHmy=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_t6dVPpaS={55,13,21,83,6,10,15,18,17,28,91,83,29,7,66,65,29,7,0,3,4,65,0,87,2,11,4,31,67,14,6,66};local _pb_LA9xQEOe={112,104,97,115,109,111,118,50};local ph4smobl4de_d={};for ph4_next_s=1,#_ph4_t6dVPpaS do ph4smobl4de_d[ph4_next_s]=string.char(_pb_XVHmy(_ph4_t6dVPpaS[ph4_next_s],_pb_LA9xQEOe[((ph4_next_s-1)%#_pb_LA9xQEOe)+1])) end;return table.concat(ph4smobl4de_d)end)() status.TextColor3 = Color3.fromRGB(140, 140, 140) end end) local savedKey = loadSavedKey() if savedKey then keyInput.Text = savedKey end gui.Parent = CoreGui return gui end local savedKey = loadSavedKey() if savedKey then local valid, message = validateKey(savedKey) if valid then print((function()local phasmoblade_p=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club__={43,24,92,71,30,2,31,70,87,31,24,13,45,72,127,22,20,79,6,13,70,26,11,6,21,12,14,83};local ph4smobl4de_yjo={112,104,52,115,109,111};local ph4smo_bMl={};for _ph4_X_BAk=1,#ph4smo_club__ do ph4smo_bMl[_ph4_X_BAk]=string.char(phasmoblade_p(ph4smo_club__[_ph4_X_BAk],ph4smobl4de_yjo[((_ph4_X_BAk-1)%#ph4smobl4de_yjo)+1])) end;return table.concat(ph4smo_bMl)end)() .. message) return true end end print((function()local _pb__kVrKkcd=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _pb_bJwzQwdzDf={43,24,92,71,30,2,31,70,87,31,24,13,45,72,100,31,8,14,3,13,20,22,3,27,21,26,20,10,2,26,2,72,95,22,20};local _ph4_lkUfp={112,104,52,115,109,111};local ph4smo_club_o={};for _pb_taBEgqu6=1,#_pb_bJwzQwdzDf do ph4smo_club_o[_pb_taBEgqu6]=string.char(_pb__kVrKkcd(_pb_bJwzQwdzDf[_pb_taBEgqu6],_ph4_lkUfp[((_pb_taBEgqu6-1)%#_ph4_lkUfp)+1])) end;return table.concat(ph4smo_club_o)end)()) createGUI() repeat task.wait(0.5) until not CoreGui:FindFirstChild((function()local ph4smo_sXV9=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local _ph4_O85hf1Pl={0,0,85,0,0,0,61,87,9,59,24,0,25,10,27};local ph4_next_G5XQdP={112,104,97,115,109,111,118,50};local ph4smobl4de_xZpv={};for ph4smobl4de_3=1,#_ph4_O85hf1Pl do ph4smobl4de_xZpv[ph4smobl4de_3]=string.char(ph4smo_sXV9(_ph4_O85hf1Pl[ph4smobl4de_3],ph4_next_G5XQdP[((ph4smobl4de_3-1)%#ph4_next_G5XQdP)+1])) end;return table.concat(ph4smobl4de_xZpv)end)()) savedKey = loadSavedKey() if savedKey then local valid, message = validateKey(savedKey) if valid then print((function()local ph4smobl4de_c=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local phasmoblade_Fk={43,24,92,71,30,2,12,66,22,14,5,10,105,83,38,10,26,76,3,7,2,1,82,26,8,11,89,76};local ph4_next_xl7aDj={112,104,52,115,109,111,99,108,117,98};local ph4smobl4de_s={};for _pb_UGd78uDxrL=1,#phasmoblade_Fk do ph4smobl4de_s[_pb_UGd78uDxrL]=string.char(ph4smobl4de_c(phasmoblade_Fk[_pb_UGd78uDxrL],ph4_next_xl7aDj[((_pb_UGd78uDxrL-1)%#ph4_next_xl7aDj)+1])) end;return table.concat(ph4smobl4de_s)end)() .. message) return true end end print((function()local ph4smobl4de_O=bit32 and bit32.bxor or function(a,b)local r,m=0,1 for i=1,8 do local x,y=a%2,b%2 if x~=y then r=r+m end a,b,m=(a-x)/2,(b-y)/2,m*2 end return r%256 end;local ph4smo_club_M={43,24,9,71,30,2,25,28,19,4,20,17,48,79,56,93,80,30,0,31,4,11,86,89,21,17,65,22,3,27,19,64,21,12};local ph4_next_Cip2BK={112,104,97,115,109,111,118,50};local _pb_EaQmUlSfX={};for ph4smo_club_D=1,#ph4smo_club_M do _pb_EaQmUlSfX[ph4smo_club_D]=string.char(ph4smobl4de_O(ph4smo_club_M[ph4smo_club_D],ph4_next_Cip2BK[((ph4smo_club_D-1)%#ph4_next_Cip2BK)+1])) end;return table.concat(_pb_EaQmUlSfX)end)()) return false
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local CoreGui = game:GetService("CoreGui")
+local TweenService = game:GetService("TweenService")
+
+local API_URL = "https://ph4smoapi.vercel.app/api/checkkey"
+local KEY_STORAGE = "ph4smo_key_v1"
+
+local function getHWID()
+    local success, hwid = pcall(function()
+        return game:GetService("RbxAnalyticsService"):GetClientId()
+    end)
+    return success and hwid or "unknown"
+end
+
+local function saveKey(key)
+    if writefile then
+        writefile(KEY_STORAGE, key)
+    end
+end
+
+local function loadSavedKey()
+    if readfile and isfile and isfile(KEY_STORAGE) then
+        return readfile(KEY_STORAGE)
+    end
+    return nil
+end
+
+local function formatTimeRemaining(minutes)
+    if not minutes then
+        return "Lifetime"
+    end
+    
+    local hours = minutes / 60
+    local days = hours / 24
+    local months = days / 30
+    local years = days / 365
+    
+    if years >= 1 then
+        return string.format("%.1f year%s", years, years >= 2 and "s" or "")
+    elseif months >= 1 then
+        return string.format("%.1f month%s", months, months >= 2 and "s" or "")
+    elseif days >= 1 then
+        return string.format("%.1f day%s", days, days >= 2 and "s" or "")
+    elseif hours >= 1 then
+        return string.format("%.1f hour%s", hours, hours >= 2 and "s" or "")
+    else
+        return string.format("%d minute%s", minutes, minutes ~= 1 and "s" or "")
+    end
+end
+
+local function validateKey(key)
+    local hwid = getHWID()
+    local url = API_URL .. "?key=" .. HttpService:UrlEncode(key) .. "&hwid=" .. HttpService:UrlEncode(hwid)
+    
+    local success, response = pcall(function()
+        return game:HttpGet(url, true)
+    end)
+    
+    if not success then
+        return false, "Connection error"
+    end
+    
+    local data = HttpService:JSONDecode(response)
+    
+    if data.valid then
+        if data.lifetime then
+            return true, "Lifetime key activated", data
+        else
+            local timeStr = formatTimeRemaining(data.expiresIn)
+            return true, "Key valid for " .. timeStr, data
+        end
+    else
+        local reasons = {
+            invalid_key = "Invalid key",
+            key_expired = "Key expired",
+            hwid_mismatch = "Key bound to another device",
+            key_banned = "Key banned",
+            hwid_banned = "Device banned",
+            rate_limited = "Too many requests",
+            missing_params = "Invalid request"
+        }
+        return false, reasons[data.reason] or "Unknown error"
+    end
+end
+
+local function createGUI()
+    
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "ph4smoKeySystem"
+    gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    gui.ResetOnSpawn = false
+    
+    
+    local main = Instance.new("Frame")
+    main.Name = "Main"
+    main.Size = UDim2.new(0, 380, 0, 200)
+    main.Position = UDim2.new(0.5, -190, 0.5, -100)
+    main.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+    main.BorderSizePixel = 0
+    main.Parent = gui
+    
+    local mainCorner = Instance.new("UICorner")
+    mainCorner.CornerRadius = UDim.new(0, 16)
+    mainCorner.Parent = main
+    
+    local mainStroke = Instance.new("UIStroke")
+    mainStroke.Color = Color3.fromRGB(45, 45, 45)
+    mainStroke.Thickness = 1.5
+    mainStroke.Parent = main
+    
+    
+    local topBar = Instance.new("Frame")
+    topBar.Name = "TopBar"
+    topBar.Size = UDim2.new(1, 0, 0, 50)
+    topBar.Position = UDim2.new(0, 0, 0, 0)
+    topBar.BackgroundTransparency = 1
+    topBar.Parent = main
+    
+    
+    local closeBtn = Instance.new("TextButton")
+    closeBtn.Name = "CloseBtn"
+    closeBtn.Size = UDim2.new(0, 28, 0, 28)
+    closeBtn.Position = UDim2.new(1, -38, 0, 11)
+    closeBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    closeBtn.BorderSizePixel = 0
+    closeBtn.Text = "X"
+    closeBtn.TextColor3 = Color3.fromRGB(180, 180, 180)
+    closeBtn.TextSize = 16
+    closeBtn.Font = Enum.Font.GothamBold
+    closeBtn.Parent = main
+    
+    local closeCorner = Instance.new("UICorner")
+    closeCorner.CornerRadius = UDim.new(0, 8)
+    closeCorner.Parent = closeBtn
+    
+    
+    local title = Instance.new("TextLabel")
+    title.Name = "Title"
+    title.Size = UDim2.new(1, 0, 0, 25)
+    title.Position = UDim2.new(0, 0, 0, 12)
+    title.BackgroundTransparency = 1
+    title.Text = "ph4smo.club"
+    title.TextColor3 = Color3.fromRGB(255, 255, 255)
+    title.TextSize = 20
+    title.Font = Enum.Font.GothamBold
+    title.TextXAlignment = Enum.TextXAlignment.Center
+    title.Parent = main
+    
+    
+    local subtitle = Instance.new("TextLabel")
+    subtitle.Name = "Subtitle"
+    subtitle.Size = UDim2.new(1, 0, 0, 12)
+    subtitle.Position = UDim2.new(0, 0, 0, 35)
+    subtitle.BackgroundTransparency = 1
+    subtitle.Text = "KEY SYSTEM"
+    subtitle.TextColor3 = Color3.fromRGB(100, 100, 100)
+    subtitle.TextSize = 9
+    subtitle.Font = Enum.Font.Gotham
+    subtitle.TextXAlignment = Enum.TextXAlignment.Center
+    subtitle.Parent = main
+    
+    
+    local inputFrame = Instance.new("Frame")
+    inputFrame.Name = "InputFrame"
+    inputFrame.Size = UDim2.new(1, -40, 0, 42)
+    inputFrame.Position = UDim2.new(0, 20, 0, 60)
+    inputFrame.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+    inputFrame.BorderSizePixel = 0
+    inputFrame.Parent = main
+    
+    local inputCorner = Instance.new("UICorner")
+    inputCorner.CornerRadius = UDim.new(0, 10)
+    inputCorner.Parent = inputFrame
+    
+    local keyInput = Instance.new("TextBox")
+    keyInput.Name = "KeyInput"
+    keyInput.Size = UDim2.new(1, -24, 1, 0)
+    keyInput.Position = UDim2.new(0, 12, 0, 0)
+    keyInput.BackgroundTransparency = 1
+    keyInput.Text = ""
+    keyInput.PlaceholderText = "Paste your key here..."
+    keyInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+    keyInput.PlaceholderColor3 = Color3.fromRGB(90, 90, 90)
+    keyInput.TextSize = 13
+    keyInput.Font = Enum.Font.Gotham
+    keyInput.TextXAlignment = Enum.TextXAlignment.Left
+    keyInput.ClearTextOnFocus = false
+    keyInput.Parent = inputFrame
+    
+    
+    local status = Instance.new("TextLabel")
+    status.Name = "Status"
+    status.Size = UDim2.new(1, -40, 0, 20)
+    status.Position = UDim2.new(0, 20, 0, 110)
+    status.BackgroundTransparency = 1
+    status.Text = ""
+    status.TextColor3 = Color3.fromRGB(140, 140, 140)
+    status.TextSize = 11
+    status.Font = Enum.Font.Gotham
+    status.TextWrapped = true
+    status.TextXAlignment = Enum.TextXAlignment.Center
+    status.Parent = main
+    
+    
+    local checkBtn = Instance.new("TextButton")
+    checkBtn.Name = "CheckBtn"
+    checkBtn.Size = UDim2.new(0, 165, 0, 38)
+    checkBtn.Position = UDim2.new(0, 20, 0, 145)
+    checkBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    checkBtn.BorderSizePixel = 0
+    checkBtn.Text = "Check Key"
+    checkBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+    checkBtn.TextSize = 13
+    checkBtn.Font = Enum.Font.GothamBold
+    checkBtn.Parent = main
+    
+    local checkCorner = Instance.new("UICorner")
+    checkCorner.CornerRadius = UDim.new(0, 10)
+    checkCorner.Parent = checkBtn
+    
+    
+    local getBtn = Instance.new("TextButton")
+    getBtn.Name = "GetBtn"
+    getBtn.Size = UDim2.new(0, 165, 0, 38)
+    getBtn.Position = UDim2.new(0, 195, 0, 145)
+    getBtn.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    getBtn.BorderSizePixel = 0
+    getBtn.Text = "Get Key"
+    getBtn.TextColor3 = Color3.fromRGB(200, 200, 200)
+    getBtn.TextSize = 13
+    getBtn.Font = Enum.Font.GothamBold
+    getBtn.Parent = main
+    
+    local getCorner = Instance.new("UICorner")
+    getCorner.CornerRadius = UDim.new(0, 10)
+    getCorner.Parent = getBtn
+    
+    
+    local dragging = false
+    local dragInput, mousePos, framePos
+    
+    topBar.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            mousePos = input.Position
+            framePos = main.Position
+            
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+    
+    topBar.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement then
+            dragInput = input
+        end
+    end)
+    
+    game:GetService("UserInputService").InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            local delta = input.Position - mousePos
+            main.Position = UDim2.new(
+                framePos.X.Scale,
+                framePos.X.Offset + delta.X,
+                framePos.Y.Scale,
+                framePos.Y.Offset + delta.Y
+            )
+        end
+    end)
+    
+    
+    local function buttonHover(btn, hoverColor, normalColor)
+        btn.MouseEnter:Connect(function()
+            TweenService:Create(btn, TweenInfo.new(0.15), {BackgroundColor3 = hoverColor}):Play()
+        end)
+        btn.MouseLeave:Connect(function()
+            TweenService:Create(btn, TweenInfo.new(0.15), {BackgroundColor3 = normalColor}):Play()
+        end)
+    end
+    
+    buttonHover(checkBtn, Color3.fromRGB(235, 235, 235), Color3.fromRGB(255, 255, 255))
+    buttonHover(getBtn, Color3.fromRGB(45, 45, 45), Color3.fromRGB(35, 35, 35))
+    buttonHover(closeBtn, Color3.fromRGB(220, 50, 50), Color3.fromRGB(30, 30, 30))
+    
+    
+    closeBtn.MouseButton1Click:Connect(function()
+        gui:Destroy()
+    end)
+    
+    
+    checkBtn.MouseButton1Click:Connect(function()
+        local key = keyInput.Text:upper():gsub("%s+", "")
+        
+        if #key == 0 then
+            status.Text = "Please enter a key"
+            status.TextColor3 = Color3.fromRGB(239, 68, 68)
+            return
+        end
+        
+        status.Text = "Validating..."
+        status.TextColor3 = Color3.fromRGB(140, 140, 140)
+        checkBtn.Text = "Checking..."
+        
+        task.wait(0.3)
+        
+        local valid, message, data = validateKey(key)
+        
+        if valid then
+            status.Text = message
+            status.TextColor3 = Color3.fromRGB(34, 197, 94)
+            checkBtn.Text = "Success!"
+            
+            saveKey(key)
+            
+            task.wait(1)
+            gui:Destroy()
+            
+            
+            return true
+        else
+            status.Text = message
+            status.TextColor3 = Color3.fromRGB(239, 68, 68)
+            checkBtn.Text = "Check Key"
+            return false
+        end
+    end)
+    
+    
+    getBtn.MouseButton1Click:Connect(function()
+        if setclipboard then
+            setclipboard("https://ph4smoapi.vercel.app/get-key")
+            status.Text = "Link copied!"
+            status.TextColor3 = Color3.fromRGB(34, 197, 94)
+        else
+            status.Text = "Get key at: ph4smoapi.vercel.app"
+            status.TextColor3 = Color3.fromRGB(140, 140, 140)
+        end
+    end)
+    
+    
+    local savedKey = loadSavedKey()
+    if savedKey then
+        keyInput.Text = savedKey
+    end
+    
+    gui.Parent = CoreGui
+    
+    return gui
+end
+
+
+local savedKey = loadSavedKey()
+
+if savedKey then
+    local valid, message = validateKey(savedKey)
+    
+    if valid then
+        print("[ph4smo.club] Key verified: " .. message)
+        return true
+    end
+end
+
+
+print("[ph4smo.club] Please enter your key")
+createGUI()
+
+
+repeat task.wait(0.5) until not CoreGui:FindFirstChild("ph4smoKeySystem")
+
+
+savedKey = loadSavedKey()
+if savedKey then
+    local valid, message = validateKey(savedKey)
+    if valid then
+        print("[ph4smo.club] Key verified: " .. message)
+        return true
+    end
+end
+
+print("[ph4smo.club] No valid key entered")
+return false
