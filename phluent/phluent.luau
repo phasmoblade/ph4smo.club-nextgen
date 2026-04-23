@@ -1,13 +1,10 @@
 --[[
 
-                                                                    
 ▄▄▄▄▄▄▄   ▄▄▄   ▄▄▄ ▄▄▄      ▄▄▄  ▄▄▄  ▄▄▄▄▄▄▄ ▄▄▄    ▄▄▄ ▄▄▄▄▄▄▄▄▄ 
 ███▀▀███▄ ███   ███ ███      ███  ███ ███▀▀▀▀▀ ████▄  ███ ▀▀▀███▀▀▀ 
 ███▄▄███▀ █████████ ███      ███  ███ ███▄▄    ███▀██▄███    ███    
 ███▀▀▀▀   ███▀▀▀███ ███      ███▄▄███ ███      ███  ▀████    ███    
 ███       ███   ███ ████████ ▀██████▀ ▀███████ ███    ███    ███    
-                                                                    
-                                                                    
 
 A modified version of Fluent Plus aka fork of Fluent
 https://fluent-pl.us
@@ -4216,6 +4213,15 @@ Components.Window = (function()
 			Position = UDim2.fromOffset(0, 0),
 			DropdownsOutsideWindow = Config.DropdownsOutsideWindow == true,
 		}
+
+		-- Mobile: reduce window size to fit screen
+		if Mobile then
+			local vp = Camera.ViewportSize
+			local maxW = math.min(Window.Size.X.Offset, vp.X - 20)
+			local maxH = math.min(Window.Size.Y.Offset, vp.Y - 40)
+			Window.Size = UDim2.fromOffset(maxW, maxH)
+			Config.TabWidth = math.min(Config.TabWidth or 160, 90)
+		end
 
 		Library.Window = Window
 
@@ -9882,7 +9888,16 @@ Library.CreateWindow = function(self, Config)
 	Library:SetTheme(Config.Theme)
 
 
-
+	-- Auto-create minimizer on mobile
+	if Mobile then
+		task.spawn(function()
+			task.wait(0.5)
+			Library:CreateMinimizer({
+				Size = UDim2.fromOffset(44, 44),
+				Position = UDim2.new(0, 10, 0.5, -22),
+			})
+		end)
+	end
 
 
 	return Window
