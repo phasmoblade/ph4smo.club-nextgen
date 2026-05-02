@@ -1,3 +1,4 @@
 return {
 	["bbn"] = "recode",
+	["notoriety"] = "1.0",
 }
