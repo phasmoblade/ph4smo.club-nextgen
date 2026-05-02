@@ -195,12 +195,10 @@ export default function handler(req, res) {
   res.setHeader('Content-Encoding', 'identity');
 
   const script = `-- ph4smo.club loader
--- Two-stage loading: key-system.lua → loader.lua
+-- Direct loading: loader.lua
 
-print("[ph4smo.club] Loading key system...")
+print("[ph4smo.club] Loading...")
 
--- Load key-system.lua first
-local keySystemUrl = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/key-system.lua"
 local loaderUrl = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/loader.lua"
 
 local function loadScript(url)
@@ -230,31 +228,12 @@ local function loadScript(url)
     return true
 end
 
--- Step 1: Load key-system.lua (handles key validation and GUI)
-local keySystemSuccess = loadScript(keySystemUrl)
-
-if not keySystemSuccess then
-    warn("[ph4smo.club] Failed to load key system")
-    return
-end
-
--- Wait for key system to complete (GUI closed or key validated)
-local CoreGui = game:GetService("CoreGui")
-repeat 
-    task.wait(0.5) 
-until not CoreGui:FindFirstChild("ph4smoKeySystem")
-
-print("[ph4smo.club] Key system completed, loading main loader...")
-
--- Step 2: Load loader.lua (loads game scripts)
+-- Load loader.lua (handles key validation and game scripts)
 local loaderSuccess = loadScript(loaderUrl)
 
 if not loaderSuccess then
-    warn("[ph4smo.club] Failed to load main loader")
-    return
-end
-
-print("[ph4smo.club] Loader complete!")`;
+    warn("[ph4smo.club] Failed to load loader")
+end`;
 
   res.status(200).send(script);
 }
