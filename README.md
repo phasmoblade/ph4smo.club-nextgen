@@ -13,13 +13,15 @@ https://ph4smo.vercel.app/games
 # WARNING!!
 - our script not still working on Xeno API/Solara API (Tested), just use good exec >.<
 # SS
-- Gui Preview
+- Script Preview
 
-<img width="1912" height="1001" alt="image" src="https://github.com/user-attachments/assets/506bbbde-2624-44ed-8a0c-90ae4e434ab0" />
+- Bite By Night
+<img width="1522" height="613" alt="image (3)" src="https://github.com/user-attachments/assets/35cf0937-be1e-44c4-a172-f4f153db709b" />
 
-
+- Notoriety (beta script, we do not guarantee that all functions work perfectly)
+<img width="1297" height="687" alt="image (4)" src="https://github.com/user-attachments/assets/f4f2855f-5ae7-4670-9c3a-166e8411ab16" />
 
 - Site Preview
+<img width="1811" height="855" alt="image" src="https://github.com/user-attachments/assets/a1c2105b-809b-45f2-9219-0a0df2d0c71d" />
 
-<img width="1909" height="918" alt="image" src="https://github.com/user-attachments/assets/884c00ee-f6f5-4857-9079-19378dc3bbf3" />
 
