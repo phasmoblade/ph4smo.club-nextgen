@@ -1,4 +1,4 @@
-# ph4smo.club nextgen - keyless roblox script hub XD
+# ph4smo.club nextgen - good roblox script hub XD (with key system)
 - we on X: https://x.com/ph4smoclub
 - Loadstring in releases..
 # Based on Phluent (aka fork Fluent plus aka fork Fluent)
