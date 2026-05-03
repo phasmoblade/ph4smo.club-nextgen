@@ -1,13 +1,17 @@
-# ph4smo.club nextgen - good roblox script hub XD (with key system)
+# 🪽 > ph4smo.club (next generation) - good roblox script hub :D (with easy key system)
 - we on X: https://x.com/ph4smoclub
-- Loadstring in releases..
+- Loadstring: loadstring(game:HttpGet("https://ph4smo.vercel.app/api/loader"))()
 # Based on Phluent (aka fork Fluent plus aka fork Fluent)
 - https://fluent-pl.us/
 - https://github.com/dawid-scripts/Fluent
-# Supported Games (18.04.2026):
+# Supported Games (03.05.2026):
 https://ph4smo.vercel.app/games
+# Supported Executors (03.05.2026):
+Seliware
+Madium
+(other execs not tested by me)
 # WARNING!!
-- ph4smo.club not still working on Xeno API/Solara API (Tested), just use good exec >.<
+- our script not still working on Xeno API/Solara API (Tested), just use good exec >.<
 # SS
 - Gui Preview
 
