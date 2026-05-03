@@ -7,8 +7,8 @@
 # Supported Games (03.05.2026):
 https://ph4smo.vercel.app/games
 # Supported Executors (03.05.2026):
-Seliware
-Madium
+- Seliware
+- Madium
 (other execs not tested by me)
 # WARNING!!
 - our script not still working on Xeno API/Solara API (Tested), just use good exec >.<
