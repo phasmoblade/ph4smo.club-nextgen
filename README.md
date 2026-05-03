@@ -17,17 +17,21 @@ https://ph4smo.vercel.app/games
 # Script Preview
 
 - Bite By Night
+
 <img width="1522" height="613" alt="image (3)" src="https://github.com/user-attachments/assets/35cf0937-be1e-44c4-a172-f4f153db709b" />
 
 - Notoriety (beta script, we do not guarantee that all functions work perfectly)
+
 <img width="1297" height="687" alt="image (4)" src="https://github.com/user-attachments/assets/f4f2855f-5ae7-4670-9c3a-166e8411ab16" />
 
 # Site Preview
 
 - https://ph4smo.vercel.app
+
 <img width="1811" height="855" alt="image" src="https://github.com/user-attachments/assets/a1c2105b-809b-45f2-9219-0a0df2d0c71d" />
 
 - https://ph4smoapi.vercel.app
+
 <img width="1716" height="907" alt="image" src="https://github.com/user-attachments/assets/a3e8d886-8aa2-4554-9cca-773c743d22f0" />
 
 
