@@ -4,9 +4,9 @@
 # Based on Phluent (aka fork Fluent plus aka fork Fluent)
 - https://fluent-pl.us/
 - https://github.com/dawid-scripts/Fluent
-# Supported Games (03.05.2026):
+# Supported Games (04.05.2026):
 https://ph4smo.vercel.app/games
-# Supported Executors (03.05.2026):
+# Supported Executors (04.05.2026):
 - Seliware
 - Madium
 - (other execs not tested by me)
