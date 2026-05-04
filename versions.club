@@ -1,4 +1,5 @@
 return {
 	["bbn"] = "1.1R",
 	["notoriety"] = "1.1",
+	["spin-a-baddie"] = "1.0",
 }
