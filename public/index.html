@@ -205,6 +205,123 @@
         .info-card a:hover {
             color: #10b981;
         }
+        
+        /* HEADER STYLES */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #999;
+            padding: 10px 24px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            letter-spacing: 0.05em;
+        }
+        
+        .header-btn:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        
+        .header-btn.active {
+            border-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+        }
+        
+        /* SCREENSHOTS SECTION */
+        .screenshots-section {
+            min-height: 100vh;
+            padding: 120px 20px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .screenshots-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            width: 100%;
+        }
+        
+        .screenshot-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .screenshot-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        .screenshot-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background: #0a0a0a;
+        }
+        
+        .screenshot-info {
+            padding: 20px;
+        }
+        
+        .screenshot-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        
+        .screenshot-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+                gap: 20px;
+            }
+            
+            .header-btn {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+            
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .loadstring-card {
                 padding: 30px 20px;
             }
@@ -223,7 +340,14 @@
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
     
-    <div class="hero">
+    <!-- HEADER -->
+    <header class="header">
+        <button class="header-btn active" onclick="scrollToSection('hero')">Home</button>
+        <button class="header-btn" onclick="scrollToSection('screenshots')">Screenshots</button>
+    </header>
+    
+    <!-- HERO SECTION -->
+    <div class="hero" id="hero">
         <div class="title-wrapper">
             <h1 class="title">ph4smo.club</h1>
             <p class="subtitle">roblox script hub</p>
@@ -259,9 +383,60 @@
         </div>
     </div>
     
+    <!-- SCREENSHOTS SECTION -->
+    <section class="screenshots-section" id="screenshots">
+        <h2 class="screenshots-title">Screenshots</h2>
+        <div class="screenshots-grid">
+            <!-- Скриншот 1: Bite By Night -->
+            <div class="screenshot-card">
+                <img class="screenshot-img" src="screenshots/bbn.jpg" alt="Bite By Night Script">
+                <div class="screenshot-info">
+                    <h3 class="screenshot-title">Bite By Night</h3>
+                    <p class="screenshot-desc">Full-featured script with combat, survivor, and killer features</p>
+                </div>
+            </div>
+            <!-- Скриншот 2: Notoriety -->
+            <div class="screenshot-card">
+                <img class="screenshot-img" src="screenshots/notoriety.jpg" alt="Notoriety Script">
+                <div class="screenshot-info">
+                    <h3 class="screenshot-title">Notoriety</h3>
+                    <p class="screenshot-desc">Heist automation and stealth features</p>
+                </div>
+            </div>
+            <!-- Если есть еще скриншоты — добавь их сюда по примеру выше -->
+        </div>
+    </section>
+    
     <script>
         const cursor = document.querySelector('.cursor');
         const cursorDot = document.querySelector('.cursor-dot');
+        const headerBtns = document.querySelectorAll('.header-btn');
+        
+        // Прокрутка к секции
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+            
+            // Обновляем активную кнопку
+            headerBtns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        
+        // Обновляем активную кнопку при прокрутке
+        window.addEventListener('scroll', () => {
+            const hero = document.getElementById('hero');
+            const screenshots = document.getElementById('screenshots');
+            
+            if (screenshots.getBoundingClientRect().top <= 100) {
+                headerBtns[0].classList.remove('active');
+                headerBtns[1].classList.add('active');
+            } else {
+                headerBtns[0].classList.add('active');
+                headerBtns[1].classList.remove('active');
+            }
+        });
         
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
