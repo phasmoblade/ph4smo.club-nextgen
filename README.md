@@ -28,11 +28,12 @@ https://ph4smo.vercel.app/games
 
 - https://ph4smo.vercel.app
 
-<img width="1811" height="855" alt="image" src="https://github.com/user-attachments/assets/a1c2105b-809b-45f2-9219-0a0df2d0c71d" />
+<img width="1873" height="925" alt="image" src="https://github.com/user-attachments/assets/56c3c188-94d6-41fb-af3f-5bd6a67aa83a" />
 
 - https://ph4smoapi.vercel.app
 
-<img width="1716" height="907" alt="image" src="https://github.com/user-attachments/assets/a3e8d886-8aa2-4554-9cca-773c743d22f0" />
+<img width="1890" height="922" alt="image" src="https://github.com/user-attachments/assets/ebafb4d6-a548-4abd-83ba-db1b2fbdf1ad" />
+
 
 
 
