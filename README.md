@@ -14,16 +14,6 @@ https://ph4smo.vercel.app/games
 - our script not still working on Xeno API/Solara API (Tested), just use good exec >.<
 # SS
 
-# Script Preview
-
-- Bite By Night
-
-<img width="1522" height="613" alt="image (3)" src="https://github.com/user-attachments/assets/35cf0937-be1e-44c4-a172-f4f153db709b" />
-
-- Notoriety (beta script, we do not guarantee that all functions work perfectly)
-
-<img width="1297" height="687" alt="image (4)" src="https://github.com/user-attachments/assets/f4f2855f-5ae7-4670-9c3a-166e8411ab16" />
-
 # Site Preview
 
 - https://ph4smo.vercel.app
