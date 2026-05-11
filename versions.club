@@ -1,5 +1,5 @@
 return {
-	["bbn"] = "1.1R",
-	["notoriety"] = "1.1",
+	["bbn"] = "1.2R", -- updated esp, fixes
+	["notoriety"] = "1.2", -- updated functions, fixes
 	["spin-a-baddie"] = "1.0",
 }
