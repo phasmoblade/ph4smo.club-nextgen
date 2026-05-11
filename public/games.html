@@ -4,58 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supported Games - ph4smo.club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #000;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #050505;
             color: #fff;
             min-height: 100vh;
             cursor: none;
+            overflow-x: hidden;
         }
-        
-        * {
-            cursor: none !important;
-        }
-        
+
+        * { cursor: none !important; }
+
         @media (max-width: 768px) {
-            body, * {
-                cursor: auto !important;
-            }
-            
-            .cursor, .cursor-dot {
-                display: none;
-            }
+            body, * { cursor: auto !important; }
+            .cursor, .cursor-dot { display: none !important; }
         }
-        
+
         .cursor {
-            width: 20px;
-            height: 20px;
-            border: 2px solid rgba(255,255,255,.4);
+            width: 24px;
+            height: 24px;
+            border: 1.5px solid rgba(255,255,255,0.3);
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
             z-index: 9999;
-            transition: transform 0.15s ease;
+            transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.3s;
             transform: translate(-50%, -50%);
+            backdrop-filter: blur(2px);
         }
-        
+
         .cursor-dot {
-            width: 4px;
-            height: 4px;
+            width: 5px;
+            height: 5px;
             background: #fff;
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
             z-index: 9999;
             transform: translate(-50%, -50%);
+            box-shadow: 0 0 6px rgba(255,255,255,0.4);
         }
-        
+
+        /* BACKGROUND ORBS */
+        .bg-orbs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.07;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+
+        .bg-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: #fff;
+            top: -15%;
+            right: -10%;
+            animation-delay: 0s;
+        }
+
+        .bg-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: #ccc;
+            bottom: -15%;
+            left: -10%;
+            animation-delay: -10s;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(60px, -40px) scale(1.1); }
+            50% { transform: translate(-30px, 50px) scale(0.95); }
+            75% { transform: translate(40px, 20px) scale(1.05); }
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.015;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 128px 128px;
+        }
+
         .container {
             min-height: 100vh;
             display: flex;
@@ -63,124 +122,143 @@
             justify-content: center;
             align-items: center;
             padding: 60px 20px;
+            position: relative;
+            z-index: 2;
         }
-        
-        .header {
+
+        .page-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 48px;
         }
-        
+
         .title {
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 700;
-            letter-spacing: -0.05em;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
             line-height: 1;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             color: #fff;
+            text-shadow: 0 0 80px rgba(255,255,255,0.1);
         }
-        
+
         .subtitle {
-            font-size: 1rem;
-            color: #666;
-            letter-spacing: 0.3em;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.35);
+            letter-spacing: 0.35em;
             text-transform: uppercase;
             font-weight: 400;
         }
-        
+
         .games-list {
-            max-width: 600px;
+            max-width: 520px;
             width: 100%;
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 40px;
-            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-top-color: rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 12px;
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
         }
-        
+
         .game-item {
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            font-size: 1.1rem;
-            color: #ccc;
-            transition: color 0.2s;
+            padding: 18px 24px;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.6);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        
-        .game-item:last-child {
-            border-bottom: none;
-        }
-        
+
         .game-item:hover {
             color: #fff;
+            background: rgba(255,255,255,0.06);
         }
-        
+
         .back-link {
-            margin-top: 40px;
+            margin-top: 32px;
             text-align: center;
         }
-        
+
         .back-link a {
-            color: #999;
+            color: rgba(255,255,255,0.35);
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
+            font-weight: 500;
             letter-spacing: 0.1em;
-            transition: color 0.2s;
-            cursor: pointer;
+            transition: all 0.2s;
+            padding: 10px 24px;
+            border-radius: 100px;
+            border: 1px solid rgba(255,255,255,0.06);
+            display: inline-block;
         }
-        
+
         .back-link a:hover {
             color: #fff;
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.12);
         }
-        
+
         @media (max-width: 768px) {
             .games-list {
-                padding: 30px 20px;
+                padding: 8px;
             }
-            
+
             .game-item {
-                font-size: 1rem;
-                padding: 16px 0;
+                font-size: 0.95rem;
+                padding: 14px 18px;
             }
         }
     </style>
 </head>
 <body>
+    <div class="bg-orbs">
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+    </div>
+
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
-    
+
     <div class="container">
-        <div class="header">
+        <div class="page-header">
             <h1 class="title">ph4smo.club</h1>
             <p class="subtitle">supported games</p>
         </div>
-        
+
         <div class="games-list">
             <div class="game-item">Bite By Night</div>
             <div class="game-item">Notoriety</div>
             <div class="game-item">Spin a Baddie</div>
         </div>
-        
+
         <div class="back-link">
             <a href="/">← BACK TO HOME</a>
         </div>
     </div>
-    
+
     <script>
         const cursor = document.querySelector('.cursor');
         const cursorDot = document.querySelector('.cursor-dot');
-        
+
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
             cursorDot.style.left = e.clientX + 'px';
             cursorDot.style.top = e.clientY + 'px';
         });
-        
-        document.querySelectorAll('a').forEach(el => {
+
+        document.querySelectorAll('a, .game-item').forEach(el => {
             el.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(1.5)';
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.6)';
+                cursor.style.borderColor = 'rgba(255,255,255,0.6)';
             });
             el.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.borderColor = 'rgba(255,255,255,0.3)';
             });
         });
     </script>
