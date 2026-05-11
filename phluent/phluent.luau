@@ -4228,7 +4228,7 @@ Components.Window = (function()
 			local maxW = math.min(Window.Size.X.Offset, vp.X - 20)
 			local maxH = math.min(Window.Size.Y.Offset, vp.Y - 40)
 			Window.Size = UDim2.fromOffset(maxW, maxH)
-			Config.TabWidth = math.min(Config.TabWidth or 160, 90)
+			Config.TabWidth = math.min(Config.TabWidth or 160, 140)
 		end
 
 		Library.Window = Window
@@ -4750,7 +4750,28 @@ Components.Window = (function()
 			end
 		end
 		
-		if not Mobile then
+		if Mobile then
+			local SimpleBackground = New("Frame", {
+				Size = UDim2.fromScale(1, 1),
+				BackgroundTransparency = backgroundTransparency,
+				ZIndex = 0,
+				ThemeTag = {
+					BackgroundColor3 = "AcrylicMain",
+				},
+			}, {
+				New("UICorner", {
+					CornerRadius = UDim.new(0, 8),
+				}),
+				New("UIStroke", {
+					Transparency = 0.5,
+					Thickness = 1,
+					ThemeTag = {
+						Color = "AcrylicBorder",
+					},
+				}),
+			})
+			table.insert(rootChildren, SimpleBackground)
+		else
 			table.insert(rootChildren, Window.AcrylicPaint.Frame)
 		end
 		table.insert(rootChildren, Window.TabDisplay)
