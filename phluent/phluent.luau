@@ -25,6 +25,10 @@ local UserInputService = game:GetService("UserInputService")
 
 local Mobile = not RunService:IsStudio() and table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform()) ~= nil
 
+if Mobile then
+	Library.UseAcrylic = false
+end
+
 local fischbypass
 
 if game.GameId == 5750914919 then
@@ -2862,6 +2866,10 @@ Components.Tab = (function()
 		Tab.Container = Tab.ContainerFrame
 		Tab.ScrollFrame = Tab.Container
 
+		if TabModule.TabCount == 1 then
+			TabModule:SelectTab(TabIndex)
+		end
+
 		Tab.SubTabs = {}
 		Tab.SubTabContainers = {}
 		Tab.SelectedSubTab = 0
@@ -4742,7 +4750,9 @@ Components.Window = (function()
 			end
 		end
 		
-		table.insert(rootChildren, Window.AcrylicPaint.Frame)
+		if not Mobile then
+			table.insert(rootChildren, Window.AcrylicPaint.Frame)
+		end
 		table.insert(rootChildren, Window.TabDisplay)
 		table.insert(rootChildren, Window.ContainerCanvas)
 		table.insert(rootChildren, TabFrame)
@@ -4883,7 +4893,7 @@ Components.Window = (function()
 			end
 		end
 
-		if Library.UseAcrylic then
+		if Library.UseAcrylic and not Mobile then
 			Window.AcrylicPaint.AddParent(Window.Root)
 		end
 
