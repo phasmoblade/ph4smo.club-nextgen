@@ -25,10 +25,6 @@ local UserInputService = game:GetService("UserInputService")
 
 local Mobile = not RunService:IsStudio() and table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform()) ~= nil
 
-if Mobile then
-	Library.UseAcrylic = false
-end
-
 local fischbypass
 
 if game.GameId == 5750914919 then
@@ -906,6 +902,10 @@ local Library = {
 	MinimizeKeybind = nil,
 	MinimizeKey = Enum.KeyCode.LeftControl,
 }
+
+if Mobile then
+	Library.UseAcrylic = false
+end
 
 local function isMotor(value)
 	local motorType = tostring(value):match("^Motor%((.+)%)$")
