@@ -2668,10 +2668,21 @@ Components.Section = (function()
 			Section.Container,
 		})
 
-		Creator.AddSignal(Section.Layout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
-			Section.Container.Size = UDim2.new(1, 0, 0, Section.Layout.AbsoluteContentSize.Y)
-			Section.Root.Size = UDim2.new(1, 0, 0, Section.Layout.AbsoluteContentSize.Y + 25)
-		end)
+		-- Improved section size updates
+		local function updateSectionSize()
+			local contentSize = Section.Layout.AbsoluteContentSize.Y
+			if contentSize and contentSize > 0 then
+				Section.Container.Size = UDim2.new(1, 0, 0, contentSize)
+				Section.Root.Size = UDim2.new(1, 0, 0, contentSize + 25)
+			end
+		end
+		
+		Creator.AddSignal(Section.Layout:GetPropertyChangedSignal("AbsoluteContentSize"), updateSectionSize)
+		
+		-- Force update on mobile after short delay
+		if Mobile then
+			task.delay(0.1, updateSectionSize)
+		end
 
 
 		if Library.Window and Library.Window.RegisterElement then
@@ -2838,9 +2849,25 @@ Components.Tab = (function()
 			end
 		end)
 
-		Creator.AddSignal(ContainerLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
-			Tab.ContainerFrame.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y + 2)
+		-- Improved CanvasSize update with mobile fixes
+		local function updateCanvasSize()
+			local contentSize = ContainerLayout.AbsoluteContentSize.Y
+			if contentSize and contentSize > 0 then
+				Tab.ContainerFrame.CanvasSize = UDim2.new(0, 0, 0, contentSize + 20)
+			end
+		end
+		
+		Creator.AddSignal(ContainerLayout:GetPropertyChangedSignal("AbsoluteContentSize"), updateCanvasSize)
+		
+		-- Force update when tab becomes visible (fix for mobile)
+		Creator.AddSignal(Tab.ContainerFrame:GetPropertyChangedSignal("Visible"), function()
+			if Tab.ContainerFrame.Visible then
+				task.delay(Mobile and 0.1 or 0, updateCanvasSize)
+			end
 		end)
+		
+		-- Initial update
+		task.delay(0, updateCanvasSize)
 
 		Tab.Motor, Tab.SetTransparency = Creator.SpringMotor(0.92, Tab.Frame, "BackgroundTransparency")
 
@@ -3034,9 +3061,25 @@ Components.Tab = (function()
 			})
 
 			local SubTabLayout = SubTabContainer:FindFirstChild("UIListLayout")
-			Creator.AddSignal(SubTabLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
-				SubTabContainer.CanvasSize = UDim2.new(0, 0, 0, SubTabLayout.AbsoluteContentSize.Y + 2)
+			
+			-- Improved CanvasSize for sub-tabs
+			local function updateSubTabCanvas()
+				local contentSize = SubTabLayout.AbsoluteContentSize.Y
+				if contentSize and contentSize > 0 then
+					SubTabContainer.CanvasSize = UDim2.new(0, 0, 0, contentSize + 20)
+				end
+			end
+			
+			Creator.AddSignal(SubTabLayout:GetPropertyChangedSignal("AbsoluteContentSize"), updateSubTabCanvas)
+			
+			-- Force update when visible
+			Creator.AddSignal(SubTabContainer:GetPropertyChangedSignal("Visible"), function()
+				if SubTabContainer.Visible then
+					task.delay(Mobile and 0.1 or 0, updateSubTabCanvas)
+				end
 			end)
+			
+			task.delay(0, updateSubTabCanvas)
 
 			local SubTabXMotor = Flipper.SingleMotor.new(0)
 			local SubTabTransparencyMotor = Flipper.SingleMotor.new(0)
@@ -4222,13 +4265,31 @@ Components.Window = (function()
 			DropdownsOutsideWindow = Config.DropdownsOutsideWindow == true,
 		}
 
-		-- Mobile: reduce window size to fit screen
+		-- Mobile: optimized window sizing for touch devices
 		if Mobile then
 			local vp = Camera.ViewportSize
-			local maxW = math.min(Window.Size.X.Offset, vp.X - 20)
-			local maxH = math.min(Window.Size.Y.Offset, vp.Y - 40)
-			Window.Size = UDim2.fromOffset(maxW, maxH)
-			Config.TabWidth = math.min(Config.TabWidth or 160, 140)
+			local screenW, screenH = vp.X, vp.Y
+			local isPortrait = screenH > screenW
+			
+			-- Ensure minimum usable size on mobile
+			local minMobileW = math.min(500, screenW - 40)
+			local minMobileH = math.min(400, screenH - 100)
+			
+			-- Use original size if it fits, otherwise scale down
+			local targetW = math.min(Window.Size.X.Offset, minMobileW)
+			local targetH = math.min(Window.Size.Y.Offset, minMobileH)
+			
+			-- Ensure minimum dimensions
+			targetW = math.max(targetW, 320)
+			targetH = math.max(targetH, 280)
+			
+			Window.Size = UDim2.fromOffset(targetW, targetH)
+			
+			-- Smaller tab width for mobile
+			Config.TabWidth = math.min(Config.TabWidth or 140, 120)
+			
+			-- Disable acrylic on mobile for performance
+			Library.UseAcrylic = false
 		end
 
 		Library.Window = Window
@@ -5377,6 +5438,139 @@ Components.Window = (function()
 
 		function Window:SelectTab(Tab)
 			TabModule:SelectTab(Tab)
+		end
+
+		-- Theme Editor - Custom theme creation
+		function Window:AddThemeEditor(Config)
+			Config = Config or {}
+			local Parent = Config.Parent or self.Container
+			local CustomThemeSection = self:AddSection("Theme Editor", Config.Parent)
+			
+			local customTheme = {
+				Name = "Custom",
+				Accent = Color3.fromRGB(96, 205, 255),
+				AcrylicMain = Color3.fromRGB(60, 60, 60),
+				AcrylicBorder = Color3.fromRGB(90, 90, 90),
+				Text = Color3.fromRGB(240, 240, 240),
+				SubText = Color3.fromRGB(170, 170, 170),
+				Element = Color3.fromRGB(120, 120, 120),
+				ElementBorder = Color3.fromRGB(35, 35, 35),
+			}
+			
+			-- Load saved custom theme if exists
+			local savedTheme = nil
+			if isfile and isfile("ph4smo_custom_theme.json") then
+				local success, result = pcall(function()
+					return httpService:JSONDecode(readfile("ph4smo_custom_theme.json"))
+				end)
+				if success and result then
+					savedTheme = result
+					for key, value in pairs(savedTheme) do
+						if typeof(value) == "table" and value.R then
+							customTheme[key] = Color3.fromRGB(value.R, value.G, value.B)
+						end
+					end
+				end
+			end
+			
+			-- Accent Color
+			CustomThemeSection:AddColorpicker("Accent Color", {
+				Default = customTheme.Accent,
+				Callback = function(Color)
+					customTheme.Accent = Color
+					Library:SetTheme(customTheme)
+				end,
+			})
+			
+			-- Background Colors
+			CustomThemeSection:AddColorpicker("Background Main", {
+				Default = customTheme.AcrylicMain,
+				Callback = function(Color)
+					customTheme.AcrylicMain = Color
+					Library:SetTheme(customTheme)
+				end,
+			})
+			
+			CustomThemeSection:AddColorpicker("Background Border", {
+				Default = customTheme.AcrylicBorder,
+				Callback = function(Color)
+					customTheme.AcrylicBorder = Color
+					Library:SetTheme(customTheme)
+				end,
+			})
+			
+			-- Text Colors
+			CustomThemeSection:AddColorpicker("Text Color", {
+				Default = customTheme.Text,
+				Callback = function(Color)
+					customTheme.Text = Color
+					Library:SetTheme(customTheme)
+				end,
+			})
+			
+			CustomThemeSection:AddColorpicker("SubText Color", {
+				Default = customTheme.SubText,
+				Callback = function(Color)
+					customTheme.SubText = Color
+					Library:SetTheme(customTheme)
+				end,
+			})
+			
+			-- Element Colors
+			CustomThemeSection:AddColorpicker("Element Color", {
+				Default = customTheme.Element,
+				Callback = function(Color)
+					customTheme.Element = Color
+					Library:SetTheme(customTheme)
+				end,
+			})
+			
+			CustomThemeSection:AddColorpicker("Element Border", {
+				Default = customTheme.ElementBorder,
+				Callback = function(Color)
+					customTheme.ElementBorder = Color
+					Library:SetTheme(customTheme)
+				end,
+			})
+			
+			-- Actions
+			CustomThemeSection:AddButton("Save Theme", function()
+				local themeToSave = {}
+				for key, value in pairs(customTheme) do
+					if typeof(value) == "Color3" then
+						themeToSave[key] = {R = math.floor(value.R * 255), G = math.floor(value.G * 255), B = math.floor(value.B * 255)}
+					else
+						themeToSave[key] = value
+					end
+				end
+				
+				local success = pcall(function()
+					writefile("ph4smo_custom_theme.json", httpService:JSONEncode(themeToSave))
+				end)
+				
+				if success then
+					Library:Notify({Title = "Theme Saved", Content = "Custom theme has been saved!", Duration = 3})
+				else
+					Library:Notify({Title = "Error", Content = "Failed to save theme", Duration = 3})
+				end
+			end)
+			
+			CustomThemeSection:AddButton("Reset to Default", function()
+				customTheme = {
+					Name = "Custom",
+					Accent = Color3.fromRGB(96, 205, 255),
+					AcrylicMain = Color3.fromRGB(60, 60, 60),
+					AcrylicBorder = Color3.fromRGB(90, 90, 90),
+					Text = Color3.fromRGB(240, 240, 240),
+					SubText = Color3.fromRGB(170, 170, 170),
+					Element = Color3.fromRGB(120, 120, 120),
+					ElementBorder = Color3.fromRGB(35, 35, 35),
+				}
+				Library:SetTheme(customTheme)
+				Library:Notify({Title = "Theme Reset", Content = "Custom theme reset to default", Duration = 3})
+			end)
+			
+			return CustomThemeSection
 		end
 
 		Creator.AddSignal(Window.TabHolder:GetPropertyChangedSignal("CanvasPosition"), function()
@@ -10451,32 +10645,29 @@ end
 
 
 function Library:SetTheme(Value)
-
-
-	if Library.Window and table.find(Library.Themes, Value) then
-
-
-		Library.Theme = Value
-
-
-		Creator.UpdateTheme()
-
-
-
-
-
-		if Value == "Glass" then
-
-
-			Library:SetWindowTransparency(0.9)
-
-
+	-- Support custom theme tables
+	if typeof(Value) == "table" and Value.Name then
+		-- Register custom theme if not exists
+		if not Themes[Value.Name] then
+			Themes[Value.Name] = Value
+			table.insert(Themes.Names, Value.Name)
+			Library.Themes = Themes.Names
 		end
-
-
+		
+		Library.Theme = Value.Name
+		Creator.UpdateTheme()
+		return
 	end
-
-
+	
+	-- Original string-based theme switching
+	if Library.Window and table.find(Library.Themes, Value) then
+		Library.Theme = Value
+		Creator.UpdateTheme()
+		
+		if Value == "Glass" then
+			Library:SetWindowTransparency(0.9)
+		end
+	end
 end
 
 
