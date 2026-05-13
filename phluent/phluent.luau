@@ -2822,6 +2822,7 @@ Components.Tab = (function()
 			ScrollBarThickness = 3,
 			BorderSizePixel = 0,
 			CanvasSize = UDim2.fromScale(0, 0),
+			AutomaticCanvasSize = Enum.AutomaticSize.Y,
 			ScrollingDirection = Enum.ScrollingDirection.Y,
 			ScrollingEnabled = true,
 		}, {
@@ -3045,6 +3046,7 @@ Components.Tab = (function()
 				ScrollBarThickness = 3,
 				BorderSizePixel = 0,
 				CanvasSize = UDim2.fromScale(0, 0),
+				AutomaticCanvasSize = Enum.AutomaticSize.Y,
 				ScrollingDirection = Enum.ScrollingDirection.Y,
 				ScrollingEnabled = true,
 			}, {
@@ -4624,6 +4626,7 @@ Components.Window = (function()
 			ScrollBarThickness = 0,
 			BorderSizePixel = 0,
 			CanvasSize = UDim2.fromScale(0, 0),
+			AutomaticCanvasSize = Enum.AutomaticSize.Y,
 			ScrollingDirection = Enum.ScrollingDirection.Y,
 		}, {
 			New("UIListLayout", {
