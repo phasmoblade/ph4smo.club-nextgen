@@ -14,8 +14,9 @@
             box-sizing: border-box;
         }
 
-        html {
+        html, body {
             scroll-behavior: smooth;
+            min-height: 100%;
         }
 
         body {
@@ -23,11 +24,36 @@
             background: #050505;
             color: #fff;
             min-height: 100vh;
+            min-height: -webkit-fill-available;
             cursor: none;
             overflow-x: hidden;
+            overflow-y: auto;
         }
 
         * { cursor: none !important; }
+
+        /* Mobile browsers fix - Chrome Android, iOS Safari */
+        @supports (height: 100dvh) {
+            body {
+                min-height: 100dvh;
+            }
+            
+            .bg-orbs {
+                min-height: 100dvh;
+                height: 100dvh;
+            }
+        }
+        
+        @supports (-webkit-touch-callout: none) {
+            body {
+                min-height: -webkit-fill-available;
+            }
+            
+            .bg-orbs {
+                min-height: -webkit-fill-available;
+                height: -webkit-fill-available;
+            }
+        }
 
         /* CUSTOM SCROLLBAR */
         ::-webkit-scrollbar {
