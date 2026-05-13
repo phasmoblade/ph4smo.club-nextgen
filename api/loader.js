@@ -261,15 +261,21 @@ export default function handler(req, res) {
 
 print("[ph4smo.club] Loading...")
 
-local loaderUrl = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/refs/heads/main/loader.lua"
+local loaderUrl = "https://raw.githubusercontent.com/phasmoblade/ph4smo.club-nextgen/main/loader.lua"
 
 local function loadScript(url)
+    -- Remove async flag for better injector compatibility
     local success, result = pcall(function()
-        return game:HttpGet(url, true)
+        return game:HttpGet(url)
     end)
     
     if not success then
         warn("[ph4smo.club] Failed to download: " .. tostring(result))
+        return false
+    end
+    
+    if not result or result == "" then
+        warn("[ph4smo.club] Empty response from server")
         return false
     end
     
