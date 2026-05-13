@@ -3436,6 +3436,23 @@ Components.Tab = (function()
 							OldTab.ContainerTransparencyMotor:setGoal(Instant(0))
 						end)
 					end
+					
+					-- Mobile: Force CanvasSize update after tab switch
+					if Mobile then
+						task.delay(0.1, function()
+							local NewTabData = TabModule.Tabs[Tab]
+							if NewTabData and NewTabData.ContainerFrame then
+								local layout = NewTabData.ContainerFrame:FindFirstChildOfClass("UIListLayout")
+								if layout then
+									local contentSize = layout.AbsoluteContentSize.Y
+									if contentSize and contentSize > 0 then
+										NewTabData.ContainerFrame.CanvasSize = UDim2.new(0, 0, 0, contentSize + 20)
+									end
+								end
+							end
+						end)
+					end
+					
 					TabModule.AnimationTask = nil
 				end
 			end)
