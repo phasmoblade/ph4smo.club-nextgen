@@ -10,7 +10,7 @@
 local ThemeEditor = {}
 
 function ThemeEditor:Init(Fluent, Window)
-    -- Find or create Settings tab
+    -- Find existing Settings tab (MUST exist, don't create)
     local SettingsTab = nil
     
     -- Try to find existing Settings tab
@@ -21,18 +21,25 @@ function ThemeEditor:Init(Fluent, Window)
         end
     end
     
-    -- Create Settings tab if not found
+    -- If no Settings tab, can't add Theme Editor
     if not SettingsTab then
-        SettingsTab = Window:AddTab({ Title = "Settings", Icon = "rbxassetid://10734950309" })
+        warn("[ThemeEditor] Settings tab not found - add ThemeEditor:Init() AFTER creating Settings tab")
+        return nil
     end
     
-    -- Add Theme section with editor
+    -- Add Theme section to EXISTING Settings tab
     local ThemeSection = SettingsTab:AddSection("Theme Editor")
+    
+    -- Description paragraph
+    ThemeSection:AddParagraph({
+        Title = "Custom Theme",
+        Content = "Select a preset theme or create your own custom colors. Changes apply immediately."
+    })
     
     -- Get Library from Fluent
     local Library = Fluent
     
-    -- Initialize custom theme
+    -- Initialize custom theme with ALL properties including Dialog
     local customTheme = {
         Name = "Custom",
         Accent = Color3.fromRGB(96, 205, 255),
@@ -42,6 +49,12 @@ function ThemeEditor:Init(Fluent, Window)
         SubText = Color3.fromRGB(170, 170, 170),
         Element = Color3.fromRGB(120, 120, 120),
         ElementBorder = Color3.fromRGB(35, 35, 35),
+        -- Dialog colors (for exit confirmation popup)
+        Dialog = Color3.fromRGB(45, 45, 45),
+        DialogHolder = Color3.fromRGB(35, 35, 35),
+        DialogButton = Color3.fromRGB(45, 45, 45),
+        DialogButtonBorder = Color3.fromRGB(80, 80, 80),
+        DialogBorder = Color3.fromRGB(70, 70, 70),
     }
     
     -- Load saved theme
@@ -192,6 +205,29 @@ function ThemeEditor:Init(Fluent, Window)
         end
     end)
     
+    -- Dialog colors
+    ThemeSection:AddColorpicker("Dialog Background", {
+        Title = "Dialog Background",
+        Default = customTheme.Dialog,
+        Callback = function(Color)
+            customTheme.Dialog = Color
+            if Library.Theme == "Custom" then
+                Library:SetTheme(customTheme)
+            end
+        end
+    })
+    
+    ThemeSection:AddColorpicker("Dialog Button", {
+        Title = "Dialog Button",
+        Default = customTheme.DialogButton,
+        Callback = function(Color)
+            customTheme.DialogButton = Color
+            if Library.Theme == "Custom" then
+                Library:SetTheme(customTheme)
+            end
+        end
+    })
+    
     ThemeSection:AddButton("Reset to Default", function()
         customTheme = {
             Name = "Custom",
@@ -202,6 +238,11 @@ function ThemeEditor:Init(Fluent, Window)
             SubText = Color3.fromRGB(170, 170, 170),
             Element = Color3.fromRGB(120, 120, 120),
             ElementBorder = Color3.fromRGB(35, 35, 35),
+            Dialog = Color3.fromRGB(45, 45, 45),
+            DialogHolder = Color3.fromRGB(35, 35, 35),
+            DialogButton = Color3.fromRGB(45, 45, 45),
+            DialogButtonBorder = Color3.fromRGB(80, 80, 80),
+            DialogBorder = Color3.fromRGB(70, 70, 70),
         }
         
         if Library.Theme == "Custom" then
