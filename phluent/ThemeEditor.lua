@@ -70,36 +70,6 @@ function ThemeEditor:Init(Fluent, Window, SettingsTab)
         end
     end
     
-    -- Theme selector dropdown (preset themes + Custom)
-    local themeNames = {}
-    
-    -- Ensure Library.Themes exists and has values
-    local availableThemes = Library.Themes or {}
-    
-    -- If no themes found, add default ones
-    if #availableThemes == 0 then
-        availableThemes = {"Dark", "Light", "Violet", "Darker", "Rose"}
-    end
-    
-    for _, name in pairs(availableThemes) do
-        table.insert(themeNames, name)
-    end
-    table.insert(themeNames, "Custom")
-    
-    ThemeSection:AddDropdown("Theme Selector", {
-        Title = "Select Theme",
-        Values = themeNames,
-        Multi = false,
-        Default = Library.Theme or "Dark",
-        Callback = function(Value)
-            if Value == "Custom" then
-                Library:SetTheme(customTheme)
-            else
-                Library:SetTheme(Value)
-            end
-        end
-    })
-    
     -- Color pickers for custom theme
     ThemeSection:AddColorpicker("Accent Color", {
         Title = "Accent Color",
@@ -179,7 +149,7 @@ function ThemeEditor:Init(Fluent, Window, SettingsTab)
     })
     
     -- Action buttons
-    ThemeSection:AddButton("Save Custom Theme", function()
+    ThemeSection:AddButton({Title = "Save Custom Theme", Callback = function()
         local themeToSave = {}
         for key, value in pairs(customTheme) do
             if typeof(value) == "Color3" then
@@ -210,7 +180,7 @@ function ThemeEditor:Init(Fluent, Window, SettingsTab)
                 Duration = 3
             })
         end
-    end)
+    end})
     
     -- Dialog colors
     ThemeSection:AddColorpicker("Dialog Background", {
@@ -235,7 +205,7 @@ function ThemeEditor:Init(Fluent, Window, SettingsTab)
         end
     })
     
-    ThemeSection:AddButton("Reset to Default", function()
+    ThemeSection:AddButton({Title = "Reset to Default", Callback = function()
         customTheme = {
             Name = "Custom",
             Accent = Color3.fromRGB(96, 205, 255),
@@ -261,7 +231,7 @@ function ThemeEditor:Init(Fluent, Window, SettingsTab)
             Content = "Custom theme reset to default",
             Duration = 3
         })
-    end)
+    end})
     
     return ThemeSection
 end
