@@ -73,6 +73,46 @@ function ThemeEditor:Init(Fluent, Window, SettingsTab)
     local customTheme = deepCopy(DEFAULT_THEME)
     local themeName = "Custom"
     
+    -- Color helpers
+    local function lerp(a, b, t) return a + (b - a) * t end
+    local function lerpColor(c1, c2, t)
+        return Color3.new(lerp(c1.R, c2.R, t), lerp(c1.G, c2.G, t), lerp(c1.B, c2.B, t))
+    end
+    local function darken(c, amount) return lerpColor(c, Color3.new(0, 0, 0), amount) end
+    local function lighten(c, amount) return lerpColor(c, Color3.new(1, 1, 1), amount) end
+    
+    -- Auto-derive all ~20 related properties from the 9 main color pickers
+    local function rebuildTheme()
+        local bg = customTheme.AcrylicMain
+        local border = customTheme.AcrylicBorder
+        local elem = customTheme.Element
+        local dialog = customTheme.Dialog
+        local dialogBtn = customTheme.DialogButton
+        
+        customTheme.AcrylicGradient = ColorSequence.new(darken(bg, 0.3), darken(bg, 0.3))
+        customTheme.TitleBarLine = lighten(bg, 0.15)
+        customTheme.Tab = elem
+        customTheme.InElementBorder = border
+        customTheme.ToggleSlider = elem
+        customTheme.ToggleToggled = darken(bg, 0.4)
+        customTheme.SliderRail = elem
+        customTheme.DropdownFrame = lighten(elem, 0.3)
+        customTheme.DropdownHolder = darken(bg, 0.2)
+        customTheme.DropdownBorder = customTheme.ElementBorder
+        customTheme.DropdownOption = elem
+        customTheme.Keybind = elem
+        customTheme.Input = lighten(elem, 0.3)
+        customTheme.InputFocused = darken(bg, 0.7)
+        customTheme.InputIndicator = lighten(elem, 0.2)
+        customTheme.DialogHolder = darken(dialog, 0.25)
+        customTheme.DialogHolderLine = darken(dialog, 0.35)
+        customTheme.DialogButtonBorder = lighten(dialogBtn, 0.3)
+        customTheme.DialogBorder = lighten(dialog, 0.2)
+        customTheme.DialogInput = lighten(dialog, 0.1)
+        customTheme.DialogInputLine = lighten(elem, 0.3)
+        customTheme.Hover = elem
+    end
+    
     -- Load saved custom theme
     if isfile and isfile("ph4smo_custom_theme.json") then
         pcall(function()
@@ -84,24 +124,29 @@ function ThemeEditor:Init(Fluent, Window, SettingsTab)
                         customTheme[key] = Color3.fromRGB(value.R, value.G, value.B)
                     end
                 end
-                customTheme.Name = themeName
             end
         end)
     end
     
-    -- Register custom theme so it appears in the Interface theme dropdown
+    -- Update the built-in Custom theme with loaded colors
+    customTheme.Name = "Custom"
+    rebuildTheme()
     Library:SetTheme(customTheme)
-    -- Switch back to current theme
-    pcall(function() Library:SetTheme(Library.Theme or "Dark") end)
+    -- Switch back to whatever theme was active
+    local currentTheme = Library.Theme
+    if currentTheme ~= "Custom" then
+        pcall(function() Library:SetTheme(currentTheme or "Dark") end)
+    end
     
     -- Apply custom theme function
     local function applyCustom()
-        customTheme.Name = themeName
+        customTheme.Name = "Custom"
+        rebuildTheme()
         Library:SetTheme(customTheme)
     end
     
     local function isCustomActive()
-        return Library.Theme == themeName or Library.Theme == "Custom"
+        return Library.Theme == "Custom"
     end
     
     -- ============ UI ============
