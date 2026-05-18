@@ -10675,6 +10675,7 @@ function Library:SetTheme(Value)
 		end
 		
 		Library.Theme = Value.Name
+		Creator.Theme = Value.Name
 		Creator.UpdateTheme()
 		return
 	end
@@ -10682,6 +10683,7 @@ function Library:SetTheme(Value)
 	-- Original string-based theme switching
 	if Library.Window and table.find(Library.Themes, Value) then
 		Library.Theme = Value
+		Creator.Theme = Value
 		Creator.UpdateTheme()
 		
 		if Value == "Glass" then
