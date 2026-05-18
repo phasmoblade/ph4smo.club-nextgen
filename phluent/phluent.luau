@@ -10704,12 +10704,13 @@ end
 function Library:SetTheme(Value)
 	-- Support custom theme tables
 	if typeof(Value) == "table" and Value.Name then
-		-- Register custom theme if not exists
+		-- Register or update custom theme
 		if not Themes[Value.Name] then
-			Themes[Value.Name] = Value
 			table.insert(Themes.Names, Value.Name)
 			Library.Themes = Themes.Names
 		end
+		-- Always update theme data with new values
+		Themes[Value.Name] = Value
 		
 		Library.Theme = Value.Name
 		Creator.Theme = Value.Name
