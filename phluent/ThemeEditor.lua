@@ -128,14 +128,14 @@ function ThemeEditor:Init(Fluent, Window, SettingsTab)
         end)
     end
     
-    -- Update the built-in Custom theme with loaded colors
+    -- Update the built-in Custom theme with loaded colors (without switching to it)
     customTheme.Name = "Custom"
     rebuildTheme()
+    local savedTheme = Library.Theme -- Save BEFORE SetTheme overwrites it
     Library:SetTheme(customTheme)
-    -- Switch back to whatever theme was active
-    local currentTheme = Library.Theme
-    if currentTheme ~= "Custom" then
-        pcall(function() Library:SetTheme(currentTheme or "Dark") end)
+    -- Switch back to user's chosen theme
+    if savedTheme and savedTheme ~= "Custom" then
+        pcall(function() Library:SetTheme(savedTheme) end)
     end
     
     -- Apply custom theme function
