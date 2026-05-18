@@ -13,10 +13,16 @@ function ThemeEditor:Init(Fluent, Window)
     -- Find existing Settings tab (MUST exist, don't create)
     local SettingsTab = nil
     
+    print("[ThemeEditor] Looking for Settings tab...")
+    print("[ThemeEditor] Window.Tabs type:", typeof(Window.Tabs))
+    print("[ThemeEditor] Window.Tabs count:", Window.Tabs and #Window.Tabs or 0)
+    
     -- Try to find existing Settings tab
     for _, tab in pairs(Window.Tabs or {}) do
+        print("[ThemeEditor] Checking tab:", tab.Title or "NO TITLE")
         if tab.Title and (string.find(string.lower(tab.Title), "settings") or string.find(string.lower(tab.Title), "конфиг")) then
             SettingsTab = tab
+            print("[ThemeEditor] FOUND Settings tab!")
             break
         end
     end
@@ -24,6 +30,10 @@ function ThemeEditor:Init(Fluent, Window)
     -- If no Settings tab, can't add Theme Editor
     if not SettingsTab then
         warn("[ThemeEditor] Settings tab not found - add ThemeEditor:Init() AFTER creating Settings tab")
+        print("[ThemeEditor] Available tabs:")
+        for i, tab in pairs(Window.Tabs or {}) do
+            print("  -", i, ":", tab.Title or "NO TITLE")
+        end
         return nil
     end
     
@@ -74,7 +84,16 @@ function ThemeEditor:Init(Fluent, Window)
     
     -- Theme selector dropdown (preset themes + Custom)
     local themeNames = {}
-    for _, name in pairs(Library.Themes or {}) do
+    
+    -- Ensure Library.Themes exists and has values
+    local availableThemes = Library.Themes or {}
+    
+    -- If no themes found, add default ones
+    if #availableThemes == 0 then
+        availableThemes = {"Dark", "Light", "Violet", "Darker", "Rose"}
+    end
+    
+    for _, name in pairs(availableThemes) do
         table.insert(themeNames, name)
     end
     table.insert(themeNames, "Custom")
